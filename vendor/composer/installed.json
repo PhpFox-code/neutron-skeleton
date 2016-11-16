@@ -1,0 +1,670 @@
+[
+    {
+        "name": "codelego/phpfox-i18n",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-i18n.git",
+            "reference": "fd29cc29381804263f0046fc3735c283d87f5121"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-i18n/zipball/fd29cc29381804263f0046fc3735c283d87f5121",
+            "reference": "fd29cc29381804263f0046fc3735c283d87f5121",
+            "shasum": ""
+        },
+        "time": "2016-11-11 17:22:05",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\I18n\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "I18n library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-auth",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-auth.git",
+            "reference": "87082b5fc391a6088e2b3c0abdf70657e13f4de4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-auth/zipball/87082b5fc391a6088e2b3c0abdf70657e13f4de4",
+            "reference": "87082b5fc391a6088e2b3c0abdf70657e13f4de4",
+            "shasum": ""
+        },
+        "time": "2016-11-16 11:59:59",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Auth\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Authentication manager library for PhpFox framework"
+    },
+    {
+        "name": "codelego/phpfox-mvc",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-mvc.git",
+            "reference": "c9ddbf2bd89337f00851bbde83f2e932b45d74b5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-mvc/zipball/c9ddbf2bd89337f00851bbde83f2e932b45d74b5",
+            "reference": "c9ddbf2bd89337f00851bbde83f2e932b45d74b5",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:06:08",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Mvc\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "MVC library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-db",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-db.git",
+            "reference": "e007d0b578c855b0e87e7f50107f13d86d14da2d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-db/zipball/e007d0b578c855b0e87e7f50107f13d86d14da2d",
+            "reference": "e007d0b578c855b0e87e7f50107f13d86d14da2d",
+            "shasum": ""
+        },
+        "time": "2016-11-11 17:20:55",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Db\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Database library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-mysqli",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-mysqli.git",
+            "reference": "213b5a3fe4da253c34fb2bbad0c08422a3f07aa9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-mysqli/zipball/213b5a3fe4da253c34fb2bbad0c08422a3f07aa9",
+            "reference": "213b5a3fe4da253c34fb2bbad0c08422a3f07aa9",
+            "shasum": ""
+        },
+        "require": {
+            "codelego/phpfox-db": "dev-master"
+        },
+        "time": "2016-11-16 14:06:33",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Mysqli\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Mysqli database driver support for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-router",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-router.git",
+            "reference": "e19d8c31cbf526b1c0e335c8cbc52a96eafc0103"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-router/zipball/e19d8c31cbf526b1c0e335c8cbc52a96eafc0103",
+            "reference": "e19d8c31cbf526b1c0e335c8cbc52a96eafc0103",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:06:52",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Router\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Router library for phpfox framework"
+    },
+    {
+        "name": "codelego/phpfox-form",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-form.git",
+            "reference": "73957e0ba9f7161790232fa91ac3060e5a473aaf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-form/zipball/73957e0ba9f7161790232fa91ac3060e5a473aaf",
+            "reference": "73957e0ba9f7161790232fa91ac3060e5a473aaf",
+            "shasum": ""
+        },
+        "time": "2016-11-16 11:57:08",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Form\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Form &amp; Html element library"
+    },
+    {
+        "name": "codelego/phpfox-service",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-service.git",
+            "reference": "653e57958d95528a076c1ea9115f008bd1190a34"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-service/zipball/653e57958d95528a076c1ea9115f008bd1190a34",
+            "reference": "653e57958d95528a076c1ea9115f008bd1190a34",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:06:59",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Service\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Service library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-event-manager",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-event-manager.git",
+            "reference": "ca3508b36f896b8b98c35071e41ab23e516c8944"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-event-manager/zipball/ca3508b36f896b8b98c35071e41ab23e516c8944",
+            "reference": "ca3508b36f896b8b98c35071e41ab23e516c8944",
+            "shasum": ""
+        },
+        "time": "2016-11-16 11:59:36",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\EventManager\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Event listener pattern library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-session",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-session.git",
+            "reference": "6cc98845f28185d5d4badc2e45964b22bf6eae13"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-session/zipball/6cc98845f28185d5d4badc2e45964b22bf6eae13",
+            "reference": "6cc98845f28185d5d4badc2e45964b22bf6eae13",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:07:05",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Session\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Session library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-view",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-view.git",
+            "reference": "77b2bf82ab387cb421fbc54e4024c3e89f05dbe6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-view/zipball/77b2bf82ab387cb421fbc54e4024c3e89f05dbe6",
+            "reference": "77b2bf82ab387cb421fbc54e4024c3e89f05dbe6",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:07:23",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\View\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "View library for phpfox framework"
+    },
+    {
+        "name": "codelego/phpfox-view-asset",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-view-asset.git",
+            "reference": "618288b6211c958f46533b69f2f6c1e4119a7725"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-view-asset/zipball/618288b6211c958f46533b69f2f6c1e4119a7725",
+            "reference": "618288b6211c958f46533b69f2f6c1e4119a7725",
+            "shasum": ""
+        },
+        "time": "2016-11-16 12:08:24",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\ViewAsset\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Asset (javascript, stylesheet, Meta, ...) manager library for phpfox framework"
+    },
+    {
+        "name": "codelego/phpfox-requirejs",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-requirejs.git",
+            "reference": "a36796d3edb31215925a1d3e9b019d324c1cd6d4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-requirejs/zipball/a36796d3edb31215925a1d3e9b019d324c1cd6d4",
+            "reference": "a36796d3edb31215925a1d3e9b019d324c1cd6d4",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:06:47",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\RequireJs\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "JavaScript RequireJS library  for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-view-widget",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-view-widget.git",
+            "reference": "3f025105655cd4f0b4e81ebbffc95a9004513f49"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-view-widget/zipball/3f025105655cd4f0b4e81ebbffc95a9004513f49",
+            "reference": "3f025105655cd4f0b4e81ebbffc95a9004513f49",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:07:30",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\ViewWidget\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "View widget library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-mail",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-mail.git",
+            "reference": "48af00fc3f55470907356bdf94fe7649b97a5e57"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-mail/zipball/48af00fc3f55470907356bdf94fe7649b97a5e57",
+            "reference": "48af00fc3f55470907356bdf94fe7649b97a5e57",
+            "shasum": ""
+        },
+        "time": "2016-11-16 11:59:04",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Mail\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Mail system manager for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-file-storage",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-file-storage.git",
+            "reference": "b21a52db3b9bf7315e9922ee3fbed374875477dc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-file-storage/zipball/b21a52db3b9bf7315e9922ee3fbed374875477dc",
+            "reference": "b21a52db3b9bf7315e9922ee3fbed374875477dc",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:07:11",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\FileStorage\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "File Storage library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-cache",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-cache.git",
+            "reference": "d627b1b5b8c4cba89f483507c13b015b3cd145e0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-cache/zipball/d627b1b5b8c4cba89f483507c13b015b3cd145e0",
+            "reference": "d627b1b5b8c4cba89f483507c13b015b3cd145e0",
+            "shasum": ""
+        },
+        "time": "2016-11-16 11:59:48",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Cache\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Cache library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-log",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-log.git",
+            "reference": "5f65bbdddbe648c9104f7fefd918ad393df51a50"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-log/zipball/5f65bbdddbe648c9104f7fefd918ad393df51a50",
+            "reference": "5f65bbdddbe648c9104f7fefd918ad393df51a50",
+            "shasum": ""
+        },
+        "time": "2016-11-16 11:56:23",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Log\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Logging library for phpfox framework."
+    },
+    {
+        "name": "codelego/phpfox-validator",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-validator.git",
+            "reference": "4be8c23a3acb7e8fb98267a213577f304ee1d284"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-validator/zipball/4be8c23a3acb7e8fb98267a213577f304ee1d284",
+            "reference": "4be8c23a3acb7e8fb98267a213577f304ee1d284",
+            "shasum": ""
+        },
+        "time": "2016-11-16 14:07:17",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Validator\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Validator library for phpfox framework."
+    }
+]

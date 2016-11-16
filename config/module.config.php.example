@@ -1,0 +1,9 @@
+<?php
+
+namespace Phpfox\Name;
+
+return [
+    'aliases'=>[],
+    'factories'=>[],
+    'template'=>[],
+];
