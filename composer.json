@@ -1,6 +1,6 @@
 {
   "name": "codelego/phpfox-skeleton",
-  "description": "PhpFox social network skeleton.",
+  "description": "Authentication manager library for PhpFox framework",
   "type": "project",
   "license": "MIT",
   "authors": [
@@ -9,16 +9,38 @@
       "email": "nam.ngvan@gmail.com"
     }
   ],
-  "target-dir": "./",
   "minimum-stability": "dev",
-  "autoload": {
-    "psr-4": {
-      "Phpfox\\Auth\\": "src/"
-    }
+  "target-dir": "",
+  "require": {
+    "codelego/phpfox-i18n": "dev-master",
+    "codelego/phpfox-auth": "dev-master",
+    "codelego/phpfox-mvc": "dev-master",
+    "codelego/phpfox-mysqli": "dev-master",
+    "codelego/phpfox-db": "dev-master",
+    "codelego/phpfox-router": "dev-master",
+    "codelego/phpfox-form": "dev-master",
+    "codelego/phpfox-service": "dev-master",
+    "codelego/phpfox-event-manager": "dev-master",
+    "codelego/phpfox-session": "dev-master",
+    "codelego/phpfox-view": "dev-master",
+    "codelego/phpfox-view-asset": "dev-master",
+    "codelego/phpfox-requirejs": "dev-master",
+    "codelego/phpfox-view-widget": "dev-master",
+    "codelego/phpfox-mail": "dev-master",
+    "codelego/phpfox-file-storage": "dev-master",
+    "codelego/phpfox-cache": "dev-master",
+    "codelego/phpfox-log": "dev-master",
+    "codelego/phpfox-validator": "dev-master"
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Phpfox\\Auth\\": "test/"
-    }
+  "require-dev": {
+    "phpunit/PHPUnit": "^4.0"
+  },
+  "autoload": {
+    "files": [
+      "config/global.functions.php"
+    ]
+  },
+  "scripts": {
+    "merge_config": "php tool/merge_library_config.php"
   }
 }
