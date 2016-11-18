@@ -1,42 +1,43 @@
 <?php
 
-include __DIR__ . '/../config/global.constants.php';
+include __DIR__ . '/../config/constants.global.php';
 
-$libraryDir = PHPFOX_DIR . '/vendor/codelego/';
-
+$dirs = [
+    PHPFOX_DIR . '/vendor/codelego/',
+    PHPFOX_DIR . '/package',
+];
 $autoloader = include PHPFOX_DIR . '/vendor/autoload.php';
-
-$autoloader->addPsr4('Phpfox\\Auth\\', PHPFOX_DIR . '/library/phpfox-auth/src');
-$autoloader->addPsr4('Phpfox\\Form\\', PHPFOX_DIR . '/library/phpfox-form/src');
-
-$directoryIterator
-    = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($libraryDir,
-    RecursiveDirectoryIterator::SKIP_DOTS),
-    RecursiveIteratorIterator::SELF_FIRST,
-    RecursiveIteratorIterator::CATCH_GET_CHILD // Ignore "Permission denied"
-);
-
 $paths = [];
 $merged = [];
 
-foreach ($directoryIterator as $path => $entry) {
-    if ($entry->isDir()) {
-        continue;
+foreach ($dirs as $libraryDir) {
+    $directoryIterator
+        = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($libraryDir,
+        RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST,
+        RecursiveIteratorIterator::CATCH_GET_CHILD // Ignore "Permission denied"
+    );
+
+    foreach ($directoryIterator as $path => $entry) {
+        if ($entry->isDir()) {
+            continue;
+        }
+
+        $path = $entry->getPath() . '/' . $entry->getFilename();
+
+        if (!strpos($path, 'config/module.config.php')) {
+            continue;
+        }
+        $paths[] = $path;
     }
 
-    $path = $entry->getPath() . '/' . $entry->getFilename();
-
-    if (!strpos($path, 'config/module.config.php')) {
-        continue;
-    }
-    $paths[] = $path;
 }
 
 foreach ($paths as $path) {
     if (!file_exists($path)) {
         continue;
-}
-$data = include $path;
+    }
+    $data = include $path;
 
     if (!is_array($data)) {
         continue;
@@ -45,9 +46,10 @@ $data = include $path;
         if (!isset($merged[$name])) {
             $merged[$name] = [];
         }
-        $merged [$name] = array_merge($merged[$name], $data[$name]);
+        $merged [$name] = array_merge_recursive($merged[$name], $data[$name]);
     }
 }
+
 
 $filename = PHPFOX_DIR . '/config/library.config.php';
 

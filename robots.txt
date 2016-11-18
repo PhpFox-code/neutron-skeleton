@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /config/
+Disallow: /data/
+Disallow: /package/
+Disallow: /public/
+Disallow: /static/
+Disallow: /tool/
+Disallow: /vendor/
+sitemap:  /index.php/sitemap?format=xml&rewrite=1

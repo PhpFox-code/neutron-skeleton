@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/type-resolver/src', $vendorDir . '/phpdocumentor/reflection-docblock/src'),
+    'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
+    'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Phpfox\\View\\' => array($vendorDir . '/codelego/phpfox-view/src'),
     'Phpfox\\ViewWidget\\' => array($vendorDir . '/codelego/phpfox-view-widget/src'),
     'Phpfox\\ViewAsset\\' => array($vendorDir . '/codelego/phpfox-view-asset/src'),
@@ -22,7 +25,8 @@ return array(
     'Phpfox\\Form\\' => array($vendorDir . '/codelego/phpfox-form/src'),
     'Phpfox\\FileStorage\\' => array($vendorDir . '/codelego/phpfox-file-storage/src'),
     'Phpfox\\EventManager\\' => array($vendorDir . '/codelego/phpfox-event-manager/src'),
-    'Phpfox\\Db\\' => array($vendorDir . '/codelego/phpfox-db/src'),
+    'Phpfox\\Db\\' => array($vendorDir . '/codelego/phpfox-model/src', $vendorDir . '/codelego/phpfox-db/src'),
     'Phpfox\\Cache\\' => array($vendorDir . '/codelego/phpfox-cache/src'),
     'Phpfox\\Auth\\' => array($vendorDir . '/codelego/phpfox-auth/src'),
+    'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
 );

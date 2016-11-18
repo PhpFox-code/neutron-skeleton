@@ -15,8 +15,9 @@
     "codelego/phpfox-i18n": "dev-master",
     "codelego/phpfox-auth": "dev-master",
     "codelego/phpfox-mvc": "dev-master",
-    "codelego/phpfox-mysqli": "dev-master",
     "codelego/phpfox-db": "dev-master",
+    "codelego/phpfox-mysqli": "dev-master",
+    "codelego/phpfox-model": "dev-master",
     "codelego/phpfox-router": "dev-master",
     "codelego/phpfox-form": "dev-master",
     "codelego/phpfox-service": "dev-master",
@@ -37,7 +38,7 @@
   },
   "autoload": {
     "files": [
-      "config/global.functions.php"
+      "config/functions.global.php"
     ]
   },
   "scripts": {
