@@ -2,21 +2,20 @@
 
 namespace Register;
 
-$view = 'package/phpfox-module-register/view';
-
 return [
     'routes' => [
         'register' => [
-            'uri'      => 'register',
+            'uri'      => 'register(/<step>)',
             'defaults' => [
                 'controller' => Controller\IndexController::class,
                 'action'     => 'index',
+                'step'       => '0',
             ],
         ],
     ],
     'views'  => [
         'map' => [
-            'register/index/index' => $view . '/index/index.phtml',
+            'register/index/index' => 'package/phpfox-module-register/view/index/index.phtml',
         ],
     ],
 ];
