@@ -9,6 +9,7 @@ class ComposerStaticInit4ef94c4bd8595736b10478521ee5e830
     public static $files = array (
         'c318164a946c53748c52919ab03ed1b7' => __DIR__ . '/..' . '/codelego/phpfox-service/src/functions.php',
         'f6a8b70989d39cbc939fa46154e6c836' => __DIR__ . '/..' . '/codelego/phpfox-event-manager/src/functions.php',
+        '57bed9dc211ec0d40b898850a2c82e0f' => __DIR__ . '/..' . '/codelego/phpfox-config/src/functions.php',
         '90f70320b918cff4f50af159dd981e67' => __DIR__ . '/../..' . '/config/functions.global.php',
     );
 
@@ -44,6 +45,7 @@ class ComposerStaticInit4ef94c4bd8595736b10478521ee5e830
             'Phpfox\\FileStorage\\' => 19,
             'Phpfox\\EventManager\\' => 20,
             'Phpfox\\Db\\' => 10,
+            'Phpfox\\Config\\' => 14,
             'Phpfox\\Cache\\' => 13,
             'Phpfox\\Auth\\' => 12,
         ),
@@ -136,6 +138,10 @@ class ComposerStaticInit4ef94c4bd8595736b10478521ee5e830
         array (
             0 => __DIR__ . '/..' . '/codelego/phpfox-model/src',
             1 => __DIR__ . '/..' . '/codelego/phpfox-db/src',
+        ),
+        'Phpfox\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codelego/phpfox-config/src',
         ),
         'Phpfox\\Cache\\' => 
         array (

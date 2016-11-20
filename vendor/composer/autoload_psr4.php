@@ -26,6 +26,7 @@ return array(
     'Phpfox\\FileStorage\\' => array($vendorDir . '/codelego/phpfox-file-storage/src'),
     'Phpfox\\EventManager\\' => array($vendorDir . '/codelego/phpfox-event-manager/src'),
     'Phpfox\\Db\\' => array($vendorDir . '/codelego/phpfox-model/src', $vendorDir . '/codelego/phpfox-db/src'),
+    'Phpfox\\Config\\' => array($vendorDir . '/codelego/phpfox-config/src'),
     'Phpfox\\Cache\\' => array($vendorDir . '/codelego/phpfox-cache/src'),
     'Phpfox\\Auth\\' => array($vendorDir . '/codelego/phpfox-auth/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
