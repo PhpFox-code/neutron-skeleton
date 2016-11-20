@@ -1,19 +1,24 @@
 <?php
 namespace Core;
 
-$view = 'package/phpfox-module-core/view/';
-
 return [
-    'psr4'  => [
+    'psr4'   => [
         'Core\\' => [
-            'package/src/phpfox-module-core/src',
-            'package/src/phpfox-module-core/test',
+            'package/phpfox-module-core/src',
+            'package/phpfox-module-core/test',
         ],
     ],
-    'views' => [
-        'map' => [
-            'core/error/error' => $view . 'error/error',
-            'core/error/404'   => $view . 'error/404',
+    'routes' => [
+        'home' => [
+            'uri'      => '/',
+            'defaults' => [
+                'controller' => Controller\IndexController::class,
+                'action'     => 'index',
+            ],
         ],
+    ],
+    'views'  => [
+        'core/error/error' => 'package/phpfox-module-core/view/error/error.phtml',
+        'core/error/404'   => 'package/phpfox-module-core/view/error/404.phtml',
     ],
 ];

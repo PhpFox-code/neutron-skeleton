@@ -25,7 +25,7 @@ foreach ($dirs as $libraryDir) {
 
         $path = $entry->getPath() . '/' . $entry->getFilename();
 
-        if (!strpos($path, 'config/module.config.php')) {
+        if (!strpos($path, 'module.config.php')) {
             continue;
         }
         $paths[] = $path;
@@ -46,12 +46,13 @@ foreach ($paths as $path) {
         if (!isset($merged[$name])) {
             $merged[$name] = [];
         }
-        $merged [$name] = array_merge_recursive($merged[$name], $data[$name]);
+        $merged [$name] = _array_merge_recursive_new($merged[$name], $data[$name]);
     }
 }
 
+ksort($merged);
 
-$filename = PHPFOX_DIR . '/config/library.config.php';
+$filename = PHPFOX_DIR . '/config/bootstrap.config.php';
 
 file_put_contents($filename, '<?php return ' . var_export($merged, true) . ';');
 

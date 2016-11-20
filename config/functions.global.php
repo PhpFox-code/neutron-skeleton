@@ -49,6 +49,24 @@ namespace {
     }
 
     /**
+     * @param $string
+     *
+     * @return mixed
+     */
+    function _inflect($string){
+        return str_replace(' ', '', ucwords(str_replace(array('.', '-'), ' ' , $string)));
+    }
+
+    /**
+     * @param $string
+     *
+     * @return string
+     */
+    function _deflect($string){
+        return strtolower(trim(preg_replace('/([a-z0-9])([A-Z])/', '\1-\2', $string), '-. '));
+    }
+
+    /**
      * Convert a string to camel and down the first string.
      *
      * @param string $string
@@ -112,5 +130,80 @@ namespace {
             $result[] = sprintf('%s="%s"', $name, $value);
         }
         return implode(' ', $result);
+    }
+
+    function _array_merge_recursive_new($base, $array)
+    {
+        foreach ($array as $k => $v) {
+            if (!isset($base[$k])) {
+                $base[$k] = $v;
+            } else {
+                $base[$k] = array_merge($base[$k], $v);
+            }
+        }
+        return $base;
+    }
+
+    /**
+     * @return string
+     */
+    function _http_init_info()
+    {
+        $path = '/';
+        $method = null;
+        $host = null;
+        $baseDir = '/';
+        $protocol = 'http://';
+
+        if (isset($_SERVER['SCRIPT_FILENAME'])
+            and isset($_SERVER['DOCUMENT_ROOT'])
+        ) {
+            $baseDir = str_replace($_SERVER['DOCUMENT_ROOT'], '',
+                $_SERVER['SCRIPT_FILENAME']);
+        }
+
+        $baseDir = str_replace('index.php', '', $baseDir);
+        $baseDir = '/' . trim($baseDir, '/') . '/';
+
+        if (isset($_SERVER['SERVER_PROTOCOL'])) {
+            $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === true
+                ? 'https://' : 'http://';
+        }
+
+        if (isset($_SERVER['REDIRECT_URL'])) {
+            $path = $_SERVER['REDIRECT_URL'];
+        } elseif (isset($_SERVER['PATH_INFO'])) {
+            $path = $_SERVER['PATH_INFO'];
+        }
+
+        if (isset($_SERVER['REQUEST_METHOD'])) {
+            $method = $_SERVER['REQUEST_METHOD'];
+        }
+
+        if (isset($_SERVER['HTTP_HOST'])) {
+            $host = $_SERVER['HTTP_HOST'];
+        }
+
+        if ($method) {
+            ;
+        }
+        defined('PHPFOX_PROTOCOL') or define('PHPFOX_PROTOCOL', $protocol);
+        defined('PHPFOX_BASE_DIR') or define('PHPFOX_BASE_DIR', $baseDir);
+        defined('PHPFOX_BASE_URL') or define('PHPFOX_BASE_URL',
+            $protocol . $protocol . $host . $baseDir);
+
+        if (false !== ($lPos = strpos($path, 'index.php'))) {
+            $path = substr($path, $lPos + 9);
+        }
+
+        if (strpos($path, $baseDir) !== false) {
+            $path = substr($path, strlen($baseDir));
+        }
+        $path = trim($path, '/');
+
+        if ($path == '') {
+            $path = '/';
+        }
+        return [$path, $host, $method, $protocol];
     }
 }

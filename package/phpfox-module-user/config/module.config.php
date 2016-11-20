@@ -14,19 +14,17 @@ return [
         'user' => [Model\UserTable::class, Model\User::class],
     ],
     'services' => [
-        'map' => [
-            'user.callback' => [null, Service\EventListener::class],
-        ],
+        'user.callback' => [null, Service\EventListener::class],
     ],
     'events'   => [
-        'map' => [
-            'onBeforeLogin'       => ['user.callback'],
-            'onAfterLogin'        => ['user.callback'],
-            'onLoginSuccess'      => ['user.callback'],
-            'onLoginFailure'      => ['user.callback'],
-            'onBeforeUserCreate'  => ['user.callback'],
-            'onUserCreateSuccess' => ['user.callback'],
-            'onUserCreateFailure' => ['user.callback'],
+        'user.callback' => [
+            'onBeforeLogin',
+            'onAfterLogin',
+            'onLoginSuccess',
+            'onLoginFailure',
+            'onBeforeUserCreate',
+            'onUserCreateSuccess',
+            'onUserCreateFailure',
         ],
     ],
 ];

@@ -17,11 +17,16 @@ class LoginController extends StandardController
      */
     public function actionIndex()
     {
-        $requester = $this->serviceManager->get('requester');
+        $requester = service('requester');
 
-        $this->serviceManager->get('log')->container('info')
-            ->debug(var_export($requester->getParams()));
+        service('log.auth')->debug(var_export($requester->getParams()));
 
-        return new ViewModel('authentication/login/index');
+        if ($requester->isPost()) {
+
+        } else {
+
+        }
+
+        return new ViewModel('auth/login/index');
     }
 }

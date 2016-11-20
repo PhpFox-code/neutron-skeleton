@@ -3,7 +3,7 @@ namespace Auth\Adapter;
 
 use Auth\Model\AuthTicket;
 use Phpfox\Auth\AdapterInterface;
-use Phpfox\Auth\Result;
+use Phpfox\Auth\AuthResult;
 
 /**
  * Class TicketAdapter
@@ -39,21 +39,21 @@ class TicketAdapter implements AdapterInterface
 
     public function authenticate()
     {
-        $result = new Result();
+        $result = new AuthResult();
 
         if (!$this->identity) {
-            $result->setCode(Result::MISSING_IDENTITY);
+            $result->setCode(AuthResult::MISSING_IDENTITY);
             return $result;
         }
 
         if (!$this->credential) {
-            $result->setCode(Result::MISSING_CREDENTIAL);
+            $result->setCode(AuthResult::MISSING_CREDENTIAL);
         }
 
         $ticket = $this->findTicket();
 
         if (!$ticket) {
-            $result->setCode(Result::INVALID_CREDENTIAL);
+            $result->setCode(AuthResult::INVALID_CREDENTIAL);
         }
     }
 

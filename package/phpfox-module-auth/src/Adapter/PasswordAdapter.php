@@ -5,7 +5,7 @@ namespace Auth\Adapter;
 use Auth\Model\AuthPassword;
 use Phpfox\Auth\AdapterInterface;
 use Phpfox\Auth\AuthPasswordInterface;
-use Phpfox\Auth\Result;
+use Phpfox\Auth\AuthResult;
 use User\Model\User;
 
 class PasswordAdapter implements AdapterInterface
@@ -37,28 +37,28 @@ class PasswordAdapter implements AdapterInterface
      */
     public function authenticate()
     {
-        $result = new Result();
+        $result = new AuthResult();
 
         if (!$this->identity) {
-            $result->setCode(Result::MISSING_IDENTITY);
+            $result->setCode(AuthResult::MISSING_IDENTITY);
             return $result;
         }
 
         if (!$this->credential) {
-            $result->setCode(Result::MISSING_CREDENTIAL);
+            $result->setCode(AuthResult::MISSING_CREDENTIAL);
             return $result;
         }
 
         $user = $this->findUser($this->identity);
 
         if (!$user instanceof User) {
-            $result->setCode(Result::INVALID_IDENTITY);
+            $result->setCode(AuthResult::INVALID_IDENTITY);
         }
 
         $pwd = $this->findPassword($user->getId());
 
         if (!$pwd) {
-            $result->setCode(Result::UN_CATEGORIZE);
+            $result->setCode(AuthResult::UN_CATEGORIZE);
             return $result;
         }
         $validators = $this->getValidators();
@@ -81,11 +81,11 @@ class PasswordAdapter implements AdapterInterface
         }
 
         if ($valid) {
-            $result->setCode(Result::SUCCESS)->setIdentity($user->getId());
+            $result->setCode(AuthResult::SUCCESS)->setIdentity($user->getId());
             return $result;
         }
 
-        $result->setCode(Result::INVALID_CREDENTIAL);
+        $result->setCode(AuthResult::INVALID_CREDENTIAL);
         return $result;
     }
 

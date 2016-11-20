@@ -1,4 +1,4 @@
-<?php return array (
+<?php array (
   'auth.adapters' => 
   array (
     'password' => 'Auth\\Adapter\\PasswordAdapter',
@@ -16,20 +16,41 @@
   ),
   'events' => 
   array (
-    'requireJs' => 
+    'onAssetManagerGetHeader' => 
     array (
-      0 => 'onAssetManagerGetHeader',
-      1 => 'onAssetManagerGetFooter',
+      0 => 'requireJs',
     ),
-    'user.callback' => 
+    'onAssetManagerGetFooter' => 
     array (
-      0 => 'onBeforeLogin',
-      1 => 'onAfterLogin',
-      2 => 'onLoginSuccess',
-      3 => 'onLoginFailure',
-      4 => 'onBeforeUserCreate',
-      5 => 'onUserCreateSuccess',
-      6 => 'onUserCreateFailure',
+      0 => 'requireJs',
+    ),
+    'onBeforeLogin' => 
+    array (
+      0 => 'user.callback',
+    ),
+    'onAfterLogin' => 
+    array (
+      0 => 'user.callback',
+    ),
+    'onLoginSuccess' => 
+    array (
+      0 => 'user.callback',
+    ),
+    'onLoginFailure' => 
+    array (
+      0 => 'user.callback',
+    ),
+    'onBeforeUserCreate' => 
+    array (
+      0 => 'user.callback',
+    ),
+    'onUserCreateSuccess' => 
+    array (
+      0 => 'user.callback',
+    ),
+    'onUserCreateFailure' => 
+    array (
+      0 => 'user.callback',
     ),
   ),
   'forms.decorator' => 
@@ -78,6 +99,15 @@
       array (
         'driver' => 'filesystem',
         'filename' => 'main.log',
+      ),
+    ),
+    'auth' => 
+    array (
+      0 => 
+      array (
+        'driver' => 'filesystem',
+        'model' => 'auth_log',
+        'filename' => 'auth.log',
       ),
     ),
   ),
@@ -303,6 +333,12 @@
       0 => NULL,
       1 => 'User\\Service\\EventListener',
     ),
+    'log.auth' => 
+    array (
+      0 => 'Phpfox\\Log\\LogContainerFactory',
+      1 => NULL,
+      2 => 'auth',
+    ),
   ),
   'views' => 
   array (
@@ -321,5 +357,18 @@
   array (
     'user.small-login' => 'Auth\\Widget\\SmallLogin',
     'user.recent-login' => 'Auth\\Widget\\RecentLogin',
+  ),
+  'db.adapters' => 
+  array (
+    'default' => 
+    array (
+      'driver' => 'mysqli',
+      'host' => '127.0.0.1',
+      'port' => 3306,
+      'user' => 'root',
+      'password' => 'namnv123',
+      'database' => 'phpfox_v5',
+      'socket' => NULL,
+    ),
   ),
 );
