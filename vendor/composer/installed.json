@@ -1,62 +1,5 @@
 [
     {
-        "name": "symfony/yaml",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/yaml.git",
-            "reference": "92e2f6deeda11ffaf001caa2e43f7fc13f0eee19"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/yaml/zipball/92e2f6deeda11ffaf001caa2e43f7fc13f0eee19",
-            "reference": "92e2f6deeda11ffaf001caa2e43f7fc13f0eee19",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.9"
-        },
-        "require-dev": {
-            "symfony/console": "~2.8|~3.0"
-        },
-        "suggest": {
-            "symfony/console": "For validating YAML files using the lint command"
-        },
-        "time": "2016-11-14 16:20:13",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.2-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Yaml\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Yaml Component",
-        "homepage": "https://symfony.com"
-    },
-    {
         "name": "sebastian/version",
         "version": "1.0.6",
         "version_normalized": "1.0.6.0",
@@ -153,12 +96,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/recursion-context.git",
-            "reference": "938df7a6478e72795e5f8266cff24d06e3136f2e"
+            "reference": "2c3ba150cbec723aa057506e73a8d33bdb286c9a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/938df7a6478e72795e5f8266cff24d06e3136f2e",
-            "reference": "938df7a6478e72795e5f8266cff24d06e3136f2e",
+            "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/2c3ba150cbec723aa057506e73a8d33bdb286c9a",
+            "reference": "2c3ba150cbec723aa057506e73a8d33bdb286c9a",
             "shasum": ""
         },
         "require": {
@@ -167,11 +110,11 @@
         "require-dev": {
             "phpunit/phpunit": "~4.4"
         },
-        "time": "2016-11-15 06:55:36",
+        "time": "2016-11-19 07:33:16",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.0.x-dev"
+                "dev-master": "2.0.x-dev"
             }
         },
         "installation-source": "source",
@@ -200,75 +143,6 @@
         ],
         "description": "Provides functionality to recursively process PHP variables",
         "homepage": "http://www.github.com/sebastianbergmann/recursion-context"
-    },
-    {
-        "name": "sebastian/exporter",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sebastianbergmann/exporter.git",
-            "reference": "7dfcd2418aacbdb5e123fb23ac735acfdd6c588d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/7dfcd2418aacbdb5e123fb23ac735acfdd6c588d",
-            "reference": "7dfcd2418aacbdb5e123fb23ac735acfdd6c588d",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3",
-            "sebastian/recursion-context": "~1.0"
-        },
-        "require-dev": {
-            "ext-mbstring": "*",
-            "phpunit/phpunit": "~4.4"
-        },
-        "time": "2016-10-03 07:44:30",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.3.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "classmap": [
-                "src/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Jeff Welch",
-                "email": "whatthejeff@gmail.com"
-            },
-            {
-                "name": "Volker Dusch",
-                "email": "github@wallbash.com"
-            },
-            {
-                "name": "Bernhard Schussek",
-                "email": "bschussek@2bepublished.at"
-            },
-            {
-                "name": "Sebastian Bergmann",
-                "email": "sebastian@phpunit.de"
-            },
-            {
-                "name": "Adam Harvey",
-                "email": "aharvey@php.net"
-            }
-        ],
-        "description": "Provides the functionality to export PHP variables for visualization",
-        "homepage": "http://www.github.com/sebastianbergmann/exporter",
-        "keywords": [
-            "export",
-            "exporter"
-        ]
     },
     {
         "name": "sebastian/environment",
@@ -383,23 +257,23 @@
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/comparator.git",
-            "reference": "ce2bda23a56456f19e35d98241446b581f648c14"
+            "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/ce2bda23a56456f19e35d98241446b581f648c14",
-            "reference": "ce2bda23a56456f19e35d98241446b581f648c14",
+            "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
+            "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3",
             "sebastian/diff": "~1.2",
-            "sebastian/exporter": "~1.2"
+            "sebastian/exporter": "~1.2 || ~2.0"
         },
         "require-dev": {
             "phpunit/phpunit": "~4.4"
         },
-        "time": "2016-11-17 14:39:37",
+        "time": "2016-11-19 09:18:40",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1079,41 +953,6 @@
         ]
     },
     {
-        "name": "codelego/phpfox-model",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/codelego/phpfox-model.git",
-            "reference": "3d1c5aad6fa7be49a0b7f779b216bd3f5da5d4bb"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-model/zipball/3d1c5aad6fa7be49a0b7f779b216bd3f5da5d4bb",
-            "reference": "3d1c5aad6fa7be49a0b7f779b216bd3f5da5d4bb",
-            "shasum": ""
-        },
-        "time": "2016-11-18 15:45:36",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Phpfox\\Db\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Nam Nguyen",
-                "email": "nam.ngvan@gmail.com"
-            }
-        ],
-        "description": "Model gateway library for phpfox framework."
-    },
-    {
         "name": "phpunit/phpunit",
         "version": "4.8.x-dev",
         "version_normalized": "4.8.9999999.9999999-dev",
@@ -1188,21 +1027,182 @@
         ]
     },
     {
+        "name": "sebastian/exporter",
+        "version": "1.2.x-dev",
+        "version_normalized": "1.2.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastianbergmann/exporter.git",
+            "reference": "7dfcd2418aacbdb5e123fb23ac735acfdd6c588d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/7dfcd2418aacbdb5e123fb23ac735acfdd6c588d",
+            "reference": "7dfcd2418aacbdb5e123fb23ac735acfdd6c588d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "sebastian/recursion-context": "~1.0"
+        },
+        "require-dev": {
+            "ext-mbstring": "*",
+            "phpunit/phpunit": "~4.4"
+        },
+        "time": "2016-10-03 07:44:30",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.3.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Jeff Welch",
+                "email": "whatthejeff@gmail.com"
+            },
+            {
+                "name": "Volker Dusch",
+                "email": "github@wallbash.com"
+            },
+            {
+                "name": "Bernhard Schussek",
+                "email": "bschussek@2bepublished.at"
+            },
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sebastian@phpunit.de"
+            },
+            {
+                "name": "Adam Harvey",
+                "email": "aharvey@php.net"
+            }
+        ],
+        "description": "Provides the functionality to export PHP variables for visualization",
+        "homepage": "http://www.github.com/sebastianbergmann/exporter",
+        "keywords": [
+            "export",
+            "exporter"
+        ]
+    },
+    {
+        "name": "symfony/yaml",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/yaml.git",
+            "reference": "b009b78abb48cff1010c51d2a2283141239a9be6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/yaml/zipball/b009b78abb48cff1010c51d2a2283141239a9be6",
+            "reference": "b009b78abb48cff1010c51d2a2283141239a9be6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "require-dev": {
+            "symfony/console": "~2.8|~3.0"
+        },
+        "suggest": {
+            "symfony/console": "For validating YAML files using the lint command"
+        },
+        "time": "2016-11-19 20:35:20",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.3-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Yaml\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Yaml Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "codelego/phpfox-model",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codelego/phpfox-model.git",
+            "reference": "f4a281173d04e7f268aba0c8e8eb6225a4990f13"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codelego/phpfox-model/zipball/f4a281173d04e7f268aba0c8e8eb6225a4990f13",
+            "reference": "f4a281173d04e7f268aba0c8e8eb6225a4990f13",
+            "shasum": ""
+        },
+        "time": "2016-11-20 06:21:06",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phpfox\\Db\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nam Nguyen",
+                "email": "nam.ngvan@gmail.com"
+            }
+        ],
+        "description": "Model gateway library for phpfox framework."
+    },
+    {
         "name": "codelego/phpfox-i18n",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-i18n.git",
-            "reference": "f26214924d8bd298941bdb38d7adf7ed2dd57a3e"
+            "reference": "2eccd4fcd84148bdfe929466efebbd6cab38e772"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-i18n/zipball/f26214924d8bd298941bdb38d7adf7ed2dd57a3e",
-            "reference": "f26214924d8bd298941bdb38d7adf7ed2dd57a3e",
+            "url": "https://api.github.com/repos/codelego/phpfox-i18n/zipball/2eccd4fcd84148bdfe929466efebbd6cab38e772",
+            "reference": "2eccd4fcd84148bdfe929466efebbd6cab38e772",
             "shasum": ""
         },
-        "time": "2016-11-18 16:02:59",
+        "time": "2016-11-20 06:20:50",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1229,15 +1229,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-auth.git",
-            "reference": "115abe2111d94d774a30214b0072ef4b261d99e3"
+            "reference": "7adacb8157f107578a85c1accf745c56f579ad17"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-auth/zipball/115abe2111d94d774a30214b0072ef4b261d99e3",
-            "reference": "115abe2111d94d774a30214b0072ef4b261d99e3",
+            "url": "https://api.github.com/repos/codelego/phpfox-auth/zipball/7adacb8157f107578a85c1accf745c56f579ad17",
+            "reference": "7adacb8157f107578a85c1accf745c56f579ad17",
             "shasum": ""
         },
-        "time": "2016-11-18 15:58:23",
+        "time": "2016-11-20 06:19:47",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1264,18 +1264,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-mvc.git",
-            "reference": "46b1f8d94a428685fb6d308bcc6967fe1f1a434e"
+            "reference": "8d845594e5645d0661c579908a05bde8301a0573"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-mvc/zipball/46b1f8d94a428685fb6d308bcc6967fe1f1a434e",
-            "reference": "46b1f8d94a428685fb6d308bcc6967fe1f1a434e",
+            "url": "https://api.github.com/repos/codelego/phpfox-mvc/zipball/8d845594e5645d0661c579908a05bde8301a0573",
+            "reference": "8d845594e5645d0661c579908a05bde8301a0573",
             "shasum": ""
         },
         "require": {
-            "codelego/phpfox-event-manager": "dev-master"
+            "codelego/phpfox-event-manager": "dev-master",
+            "codelego/phpfox-service": "dev-master"
         },
-        "time": "2016-11-18 15:57:52",
+        "time": "2016-11-20 06:20:56",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1302,15 +1303,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-db.git",
-            "reference": "740a300df01410f4a12a204697c8590c893ca6e2"
+            "reference": "63b0ada10496551a99c322d46f29f2e1daad601e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-db/zipball/740a300df01410f4a12a204697c8590c893ca6e2",
-            "reference": "740a300df01410f4a12a204697c8590c893ca6e2",
+            "url": "https://api.github.com/repos/codelego/phpfox-db/zipball/63b0ada10496551a99c322d46f29f2e1daad601e",
+            "reference": "63b0ada10496551a99c322d46f29f2e1daad601e",
             "shasum": ""
         },
-        "time": "2016-11-18 16:02:27",
+        "time": "2016-11-20 06:22:20",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1337,18 +1338,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-mysqli.git",
-            "reference": "3a7d7da9ccdcf717c93bfbe57b77c84dac468b7e"
+            "reference": "0529ce39861f0835419bad91839d9eb231c98232"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-mysqli/zipball/3a7d7da9ccdcf717c93bfbe57b77c84dac468b7e",
-            "reference": "3a7d7da9ccdcf717c93bfbe57b77c84dac468b7e",
+            "url": "https://api.github.com/repos/codelego/phpfox-mysqli/zipball/0529ce39861f0835419bad91839d9eb231c98232",
+            "reference": "0529ce39861f0835419bad91839d9eb231c98232",
             "shasum": ""
         },
         "require": {
             "codelego/phpfox-db": "dev-master"
         },
-        "time": "2016-11-18 15:54:28",
+        "time": "2016-11-20 06:21:02",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1375,15 +1376,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-router.git",
-            "reference": "42f3a1ec139876582b9a985513533775bf3b483c"
+            "reference": "559bacf27b37003e34636e71eb936c0e5330011a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-router/zipball/42f3a1ec139876582b9a985513533775bf3b483c",
-            "reference": "42f3a1ec139876582b9a985513533775bf3b483c",
+            "url": "https://api.github.com/repos/codelego/phpfox-router/zipball/559bacf27b37003e34636e71eb936c0e5330011a",
+            "reference": "559bacf27b37003e34636e71eb936c0e5330011a",
             "shasum": ""
         },
-        "time": "2016-11-18 16:01:36",
+        "time": "2016-11-20 06:20:27",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1410,15 +1411,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-form.git",
-            "reference": "54a3a721e0dece1225e6b1959900804e2ceaff79"
+            "reference": "41037a9ec884cb051d771c2670871cbcfcb0a628"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-form/zipball/54a3a721e0dece1225e6b1959900804e2ceaff79",
-            "reference": "54a3a721e0dece1225e6b1959900804e2ceaff79",
+            "url": "https://api.github.com/repos/codelego/phpfox-form/zipball/41037a9ec884cb051d771c2670871cbcfcb0a628",
+            "reference": "41037a9ec884cb051d771c2670871cbcfcb0a628",
             "shasum": ""
         },
-        "time": "2016-11-18 15:59:22",
+        "time": "2016-11-18 16:59:51",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1445,21 +1446,24 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-service.git",
-            "reference": "627e07f798cc35a4644495f3dc17239c81a50bba"
+            "reference": "cfab7d5d8d235f2de83240d20af205bb719ebd87"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-service/zipball/627e07f798cc35a4644495f3dc17239c81a50bba",
-            "reference": "627e07f798cc35a4644495f3dc17239c81a50bba",
+            "url": "https://api.github.com/repos/codelego/phpfox-service/zipball/cfab7d5d8d235f2de83240d20af205bb719ebd87",
+            "reference": "cfab7d5d8d235f2de83240d20af205bb719ebd87",
             "shasum": ""
         },
-        "time": "2016-11-18 16:00:33",
+        "time": "2016-11-20 06:20:32",
         "type": "library",
         "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "Phpfox\\Service\\": "src/"
-            }
+            },
+            "files": [
+                "src/functions.php"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -1480,21 +1484,24 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-event-manager.git",
-            "reference": "840370765800966e20be7271f69c0528bf004cfc"
+            "reference": "c10c7a8da514d8649fb427dcbc46a9f7e901b29e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-event-manager/zipball/840370765800966e20be7271f69c0528bf004cfc",
-            "reference": "840370765800966e20be7271f69c0528bf004cfc",
+            "url": "https://api.github.com/repos/codelego/phpfox-event-manager/zipball/c10c7a8da514d8649fb427dcbc46a9f7e901b29e",
+            "reference": "c10c7a8da514d8649fb427dcbc46a9f7e901b29e",
             "shasum": ""
         },
-        "time": "2016-11-18 16:02:39",
+        "time": "2016-11-20 06:20:45",
         "type": "library",
         "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "Phpfox\\EventManager\\": "src/"
-            }
+            },
+            "files": [
+                "src/functions.php"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -1515,15 +1522,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-session.git",
-            "reference": "a69addca95ad466d73a21c6dd890381e9bda46f8"
+            "reference": "21c1953b912c0a690d78c2c6dff5b49bc0b9be28"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-session/zipball/a69addca95ad466d73a21c6dd890381e9bda46f8",
-            "reference": "a69addca95ad466d73a21c6dd890381e9bda46f8",
+            "url": "https://api.github.com/repos/codelego/phpfox-session/zipball/21c1953b912c0a690d78c2c6dff5b49bc0b9be28",
+            "reference": "21c1953b912c0a690d78c2c6dff5b49bc0b9be28",
             "shasum": ""
         },
-        "time": "2016-11-18 16:00:56",
+        "time": "2016-11-20 06:20:37",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1550,15 +1557,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-view.git",
-            "reference": "3821cde27199dbba3c5bd36ef95b190029ad29d9"
+            "reference": "80f730d06c9196d864d10131ae974b162afd200b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-view/zipball/3821cde27199dbba3c5bd36ef95b190029ad29d9",
-            "reference": "3821cde27199dbba3c5bd36ef95b190029ad29d9",
+            "url": "https://api.github.com/repos/codelego/phpfox-view/zipball/80f730d06c9196d864d10131ae974b162afd200b",
+            "reference": "80f730d06c9196d864d10131ae974b162afd200b",
             "shasum": ""
         },
-        "time": "2016-11-18 16:01:15",
+        "time": "2016-11-20 06:22:04",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1585,15 +1592,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-view-asset.git",
-            "reference": "ecd0ed71c9b685f1fd801715de387be0876674e6"
+            "reference": "f7b5463d9e95a7f22ea5390d0877c322238ba1d0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-view-asset/zipball/ecd0ed71c9b685f1fd801715de387be0876674e6",
-            "reference": "ecd0ed71c9b685f1fd801715de387be0876674e6",
+            "url": "https://api.github.com/repos/codelego/phpfox-view-asset/zipball/f7b5463d9e95a7f22ea5390d0877c322238ba1d0",
+            "reference": "f7b5463d9e95a7f22ea5390d0877c322238ba1d0",
             "shasum": ""
         },
-        "time": "2016-11-18 16:01:56",
+        "time": "2016-11-20 06:22:09",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1620,15 +1627,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-requirejs.git",
-            "reference": "ce07424661154c97ecfda5ac183446374eecf1f1"
+            "reference": "8ea33d8e952f490b5e37e8fb786a7b384da8722a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-requirejs/zipball/ce07424661154c97ecfda5ac183446374eecf1f1",
-            "reference": "ce07424661154c97ecfda5ac183446374eecf1f1",
+            "url": "https://api.github.com/repos/codelego/phpfox-requirejs/zipball/8ea33d8e952f490b5e37e8fb786a7b384da8722a",
+            "reference": "8ea33d8e952f490b5e37e8fb786a7b384da8722a",
             "shasum": ""
         },
-        "time": "2016-11-18 15:55:49",
+        "time": "2016-11-20 06:21:15",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1655,15 +1662,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-view-widget.git",
-            "reference": "bba5d3affe24e103a6c7e148198003b57a445723"
+            "reference": "64d2e77069c442dbdfdb125a997036113828925b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-view-widget/zipball/bba5d3affe24e103a6c7e148198003b57a445723",
-            "reference": "bba5d3affe24e103a6c7e148198003b57a445723",
+            "url": "https://api.github.com/repos/codelego/phpfox-view-widget/zipball/64d2e77069c442dbdfdb125a997036113828925b",
+            "reference": "64d2e77069c442dbdfdb125a997036113828925b",
             "shasum": ""
         },
-        "time": "2016-11-18 16:02:15",
+        "time": "2016-11-20 06:22:14",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1690,15 +1697,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-mail.git",
-            "reference": "59e04947a3b17ac83fe223d81cfe3e6c400e31b7"
+            "reference": "0203dcb750d3fad30f308385d89475e0286e6b05"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-mail/zipball/59e04947a3b17ac83fe223d81cfe3e6c400e31b7",
-            "reference": "59e04947a3b17ac83fe223d81cfe3e6c400e31b7",
+            "url": "https://api.github.com/repos/codelego/phpfox-mail/zipball/0203dcb750d3fad30f308385d89475e0286e6b05",
+            "reference": "0203dcb750d3fad30f308385d89475e0286e6b05",
             "shasum": ""
         },
-        "time": "2016-11-18 15:59:57",
+        "time": "2016-11-20 06:20:18",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1725,15 +1732,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-file-storage.git",
-            "reference": "a139931ec57c5f7e3cd74daf0c82182c078e18fb"
+            "reference": "9e7d48755e012ad7a20adee161c301b803aefb74"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-file-storage/zipball/a139931ec57c5f7e3cd74daf0c82182c078e18fb",
-            "reference": "a139931ec57c5f7e3cd74daf0c82182c078e18fb",
+            "url": "https://api.github.com/repos/codelego/phpfox-file-storage/zipball/9e7d48755e012ad7a20adee161c301b803aefb74",
+            "reference": "9e7d48755e012ad7a20adee161c301b803aefb74",
             "shasum": ""
         },
-        "time": "2016-11-18 15:59:03",
+        "time": "2016-11-20 06:19:57",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1760,15 +1767,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-cache.git",
-            "reference": "7798eef6a858ab71c8267aa6fd85c52c466721c0"
+            "reference": "2dd43c30bdd92d5907e947505a841dcb8315feea"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-cache/zipball/7798eef6a858ab71c8267aa6fd85c52c466721c0",
-            "reference": "7798eef6a858ab71c8267aa6fd85c52c466721c0",
+            "url": "https://api.github.com/repos/codelego/phpfox-cache/zipball/2dd43c30bdd92d5907e947505a841dcb8315feea",
+            "reference": "2dd43c30bdd92d5907e947505a841dcb8315feea",
             "shasum": ""
         },
-        "time": "2016-11-18 15:58:45",
+        "time": "2016-11-20 06:19:52",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1795,15 +1802,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-log.git",
-            "reference": "524ec341f938cc1c2472d4ef3ba2fdadf855ddd8"
+            "reference": "8b8b915c9d28a7625cbdc3d607771d777c9500ad"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-log/zipball/524ec341f938cc1c2472d4ef3ba2fdadf855ddd8",
-            "reference": "524ec341f938cc1c2472d4ef3ba2fdadf855ddd8",
+            "url": "https://api.github.com/repos/codelego/phpfox-log/zipball/8b8b915c9d28a7625cbdc3d607771d777c9500ad",
+            "reference": "8b8b915c9d28a7625cbdc3d607771d777c9500ad",
             "shasum": ""
         },
-        "time": "2016-11-18 15:59:38",
+        "time": "2016-11-20 06:20:04",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1830,15 +1837,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/codelego/phpfox-validator.git",
-            "reference": "00d79d5e10bdd01508a2f6e9ffe584b93a18688f"
+            "reference": "3e07927d531fd0aa2ae998c5c8e7855776ad7d75"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codelego/phpfox-validator/zipball/00d79d5e10bdd01508a2f6e9ffe584b93a18688f",
-            "reference": "00d79d5e10bdd01508a2f6e9ffe584b93a18688f",
+            "url": "https://api.github.com/repos/codelego/phpfox-validator/zipball/3e07927d531fd0aa2ae998c5c8e7855776ad7d75",
+            "reference": "3e07927d531fd0aa2ae998c5c8e7855776ad7d75",
             "shasum": ""
         },
-        "time": "2016-11-18 15:57:02",
+        "time": "2016-11-20 06:21:22",
         "type": "library",
         "installation-source": "source",
         "autoload": {

@@ -1,9 +1,9 @@
 <?php
 
-include __DIR__ . '/config/global.constants.php';
+include __DIR__ . '/config/bootstrap.php';
 
-$autoloader = include __DIR__ . '/vendor/autoload.php';
+echo serialize(service(null));
 
-$log  = new \Phpfox\Log\FilesystemLogger(__DIR__ .'/data/log/main.log');
+$log = new \Phpfox\Log\FilesystemLogger(['filename' => 'main.log']);
 
 $log->info('con duong xua em di');

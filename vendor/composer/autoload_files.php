@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'c318164a946c53748c52919ab03ed1b7' => $vendorDir . '/codelego/phpfox-service/src/functions.php',
+    'f6a8b70989d39cbc939fa46154e6c836' => $vendorDir . '/codelego/phpfox-event-manager/src/functions.php',
     '90f70320b918cff4f50af159dd981e67' => $baseDir . '/config/functions.global.php',
 );
