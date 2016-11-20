@@ -42,6 +42,6 @@
     ]
   },
   "scripts": {
-    "merge_config": "php tool/merge_library_config.php"
+    "merge": "php tool/merge_library_config.php"
   }
 }

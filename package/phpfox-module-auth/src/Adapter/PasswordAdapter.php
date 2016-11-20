@@ -33,52 +33,6 @@ class PasswordAdapter implements AdapterInterface
     }
 
     /**
-     * @param $identity
-     *
-     * @return User|null
-     */
-    protected function findUser($identity)
-    {
-        $gateway = service('tables')->get('user');
-
-        $isMail = strpos($identity, '@') > 0;
-        $isNumber = preg_match('\d', $identity);
-
-        // pre-filter email pattern
-        if ($isMail and null != ($user
-                = $gateway->findByEmail($identity))
-        ) {
-            return $user;
-        }
-
-        if (!$isMail and null != ($user
-                = $gateway->findByUsername($identity))
-        ) {
-            return $user;
-        }
-
-        if ($isNumber and null != ($user = $gateway->findByNumber($identity))) {
-            return $user;
-        }
-
-        if ($isNumber and null != ($user = $gateway->findById($identity))) {
-            return $user;
-        }
-
-        return null;
-    }
-
-    /**
-     * @param $userId
-     *
-     * @return AuthPassword|null
-     */
-    protected function findPassword($userId)
-    {
-        return service('tables')->get('auth_password')->findByUserId($userId);
-    }
-
-    /**
      * @inheritdoc
      */
     public function authenticate()
@@ -133,6 +87,52 @@ class PasswordAdapter implements AdapterInterface
 
         $result->setCode(Result::INVALID_CREDENTIAL);
         return $result;
+    }
+
+    /**
+     * @param $identity
+     *
+     * @return User|null
+     */
+    protected function findUser($identity)
+    {
+        $gateway = service('tables')->get('user');
+
+        $isMail = strpos($identity, '@') > 0;
+        $isNumber = preg_match('\d', $identity);
+
+        // pre-filter email pattern
+        if ($isMail and null != ($user
+                = $gateway->findByEmail($identity))
+        ) {
+            return $user;
+        }
+
+        if (!$isMail and null != ($user
+                = $gateway->findByUsername($identity))
+        ) {
+            return $user;
+        }
+
+        if ($isNumber and null != ($user = $gateway->findByNumber($identity))) {
+            return $user;
+        }
+
+        if ($isNumber and null != ($user = $gateway->findById($identity))) {
+            return $user;
+        }
+
+        return null;
+    }
+
+    /**
+     * @param $userId
+     *
+     * @return AuthPassword|null
+     */
+    protected function findPassword($userId)
+    {
+        return service('tables')->get('auth_password')->findByUserId($userId);
     }
 
     /**

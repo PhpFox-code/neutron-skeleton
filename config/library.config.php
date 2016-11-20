@@ -11,25 +11,75 @@
         ],
     ],
     'services' => [
-        'auth'          => 'Phpfox\\Auth\\AuthManager',
-        'breadcrumb'    => 'Phpfox\\Breadcrumb\\BreadcrumbManager',
-        'cache'         => 'Phpfox\\Cache\\CacheManager',
-        'events'        => 'Phpfox\\EventManager\\EventManager',
-        'fileStorage'   => 'Phpfox\\FileStorage\\FileStorageManager',
-        'translator'    => 'Phpfox\\I18n\\Translator',
-        'log'           => 'Phpfox\\Log\\LogManager',
-        'mail'          => 'Phpfox\\Mail\\MailService',
-        'models'        => 'Phpfox\\Model\\GatewayManager',
-        'responder'     => 'Phpfox\\Mvc\\Responder',
-        'requireJs'     => 'Phpfox\\RequireJs\\RequireJs',
-        'routing'       => 'Phpfox\\Router\\RouteManager',
-        'services'      => 'Phpfox\\Service\\ServiceManager',
-        'session'       => 'Phpfox\\Session\\SessionManager',
-        'phpRender'     => 'Phpfox\\View\\PhpRenderer',
-        'assets'        => 'Phpfox\\ViewAsset\\AssetManager',
-        'widgets'       => 'Phpfox\\ViewWidget\\WidgetManager',
-        'user.callback' => [
-            0 => 'User\\Service\\EventListener',
+        'map'       => [
+            'auth'          => [
+                0 => null,
+                1 => 'Phpfox\\Auth\\AuthManager',
+            ],
+            'breadcrumb'    => [
+                0 => null,
+                1 => 'Phpfox\\Breadcrumb\\BreadcrumbManager',
+            ],
+            'cache'         => [
+                0 => null,
+                1 => 'Phpfox\\Cache\\CacheManager',
+            ],
+            'events'        => [
+                0 => null,
+                1 => 'Phpfox\\EventManager\\EventManager',
+            ],
+            'fileStorage'   => [
+                0 => null,
+                1 => 'Phpfox\\FileStorage\\FileStorageManager',
+            ],
+            'translator'    => [
+                0 => null,
+                1 => 'Phpfox\\I18n\\Translator',
+            ],
+            'log'           => [
+                0 => null,
+                1 => 'Phpfox\\Log\\LogManager',
+            ],
+            'mail'          => [
+                0 => null,
+                1 => 'Phpfox\\Mail\\MailService',
+            ],
+            'models'        => [
+                0 => null,
+                1 => 'Phpfox\\Model\\GatewayManager',
+            ],
+            'responder'     => [
+                0 => null,
+                1 => 'Phpfox\\Mvc\\Responder',
+            ],
+            'routing'       => [
+                0 => null,
+                1 => 'Phpfox\\Router\\RouteManager',
+            ],
+            'session'       => [
+                0 => null,
+                1 => 'Phpfox\\Session\\SessionManager',
+            ],
+            'phpRender'     => [
+                0 => null,
+                1 => 'Phpfox\\View\\PhpRenderer',
+            ],
+            'assets'        => [
+                0 => null,
+                1 => 'Phpfox\\ViewAsset\\AssetManager',
+            ],
+            'widgets'       => [
+                0 => null,
+                1 => 'Phpfox\\ViewWidget\\WidgetManager',
+            ],
+            'user.callback' => [
+                0 => null,
+                1 => 'User\\Service\\EventListener',
+            ],
+        ],
+        'requireJs' => [
+            0 => null,
+            1 => 'Phpfox\\RequireJs\\RequireJs',
         ],
     ],
     'forms'    => [
@@ -76,10 +126,12 @@
         ],
     ],
     'events'   => [
-        'onAssetManagerGetHeader' => 'Phpfox\\RequireJs\\RequireJs',
-        'onAssetManagerGetFooter' => 'Phpfox\\RequireJs\\RequireJs',
-        'listeners'               => [
-            'user.callback' => [
+        'listeners' => [
+            'Phpfox\\RequireJs\\RequireJs' => [
+                0 => 'onAssetManagerGetHeader',
+                1 => 'onAssetManagerGetFooter',
+            ],
+            'user.callback'                => [
                 0 => 'onBeforeLogin',
                 1 => 'onAfterLogin',
                 2 => 'onLoginSuccess',

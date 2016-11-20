@@ -113,14 +113,4 @@ namespace {
         }
         return implode(' ', $result);
     }
-
-    /**
-     * @param  string $id
-     *
-     * @return mixed
-     */
-    function service($id)
-    {
-        return Phpfox\Mvc\App::instance()->getManager()->get($id);
-    }
 }

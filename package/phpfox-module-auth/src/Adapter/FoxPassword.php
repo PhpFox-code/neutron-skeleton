@@ -12,16 +12,6 @@ use Phpfox\Auth\AuthPasswordInterface;
 class FoxAuthPassword implements AuthPasswordInterface
 {
 
-    /**
-     * @param $string
-     *
-     * @return int
-     */
-    private function _strlen($string)
-    {
-        return mb_strlen($string, '8bit');
-    }
-
     public function isValid($input, $params)
     {
         if (!$input || !$params['source_id'] == 'fox') {
@@ -55,6 +45,16 @@ class FoxAuthPassword implements AuthPasswordInterface
         return md5(md5($input) . md5($params['salt'])) == $params['hash'];
     }
 
+    /**
+     * @param $string
+     *
+     * @return int
+     */
+    private function _strlen($string)
+    {
+        return mb_strlen($string, '8bit');
+    }
+
     public function createHash($input, $salt, $static_salt = null)
     {
         return sha1(md5($input) . md5($salt));
@@ -64,7 +64,7 @@ class FoxAuthPassword implements AuthPasswordInterface
     {
         $salt = '';
         for ($index = 0; $index < $length; ++$index) {
-            $salt .= chr(mt_rand(48,122));
+            $salt .= chr(mt_rand(48, 122));
         }
         return $salt;
     }

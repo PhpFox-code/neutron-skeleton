@@ -11,6 +11,6 @@ class SmallLogin extends Form
      */
     protected function initialize()
     {
-        
+
     }
 }

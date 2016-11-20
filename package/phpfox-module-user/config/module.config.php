@@ -8,7 +8,9 @@ return [
         'user' => [Model\UserTable::class, Model\User::class],
     ],
     'services' => [
-        'user.callback' => [Service\EventListener::class],
+        'map' => [
+            'user.callback' => [null, Service\EventListener::class],
+        ],
     ],
     'events'   => [
         'listeners' => [

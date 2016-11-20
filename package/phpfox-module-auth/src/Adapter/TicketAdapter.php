@@ -37,15 +37,6 @@ class TicketAdapter implements AdapterInterface
         $this->credential = $credential;
     }
 
-    /**
-     * @return AuthTicket|null
-     */
-    private function findTicket()
-    {
-        return service('tables')->get('auth_ticket')
-            ->findTicket($this->identity, $this->credential);
-    }
-
     public function authenticate()
     {
         $result = new Result();
@@ -64,5 +55,14 @@ class TicketAdapter implements AdapterInterface
         if (!$ticket) {
             $result->setCode(Result::INVALID_CREDENTIAL);
         }
+    }
+
+    /**
+     * @return AuthTicket|null
+     */
+    private function findTicket()
+    {
+        return service('tables')->get('auth_ticket')
+            ->findTicket($this->identity, $this->credential);
     }
 }

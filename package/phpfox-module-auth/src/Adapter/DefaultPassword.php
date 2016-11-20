@@ -29,7 +29,7 @@ class DefaultAuthPassword implements AuthPasswordInterface
     {
         $salt = '';
         for ($index = 0; $index < $length; ++$index) {
-            $salt .= chr(mt_rand(48,122));
+            $salt .= chr(mt_rand(48, 122));
         }
         return $salt;
     }
