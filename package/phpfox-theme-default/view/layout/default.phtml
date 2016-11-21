@@ -3,22 +3,33 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= service('assets')->getHeaderHtml(); ?>
+    <?= service('html_header')->getHtml(); ?>
 </head>
 <body>
-<div id="site-wrap">
-    <div id="site-container">
-        <div id="<?= service('app')->getFullActionName(); ?>">
-            <header id="header">
-            </header>
-            <div id="main">
+<div class="site-wrap">
+    <div class="site-container <?= service('app')->getFullActionName(); ?>">
+        <header>
+            <section>
+                <div class="container">
+
+                </div>
+            </section>
+        </header>
+        <section>
+            <div class="container">
+
             </div>
-            <footer id="footer">
-            </footer>
-        </div>
+        </section>
+        <footer>
+            <section>
+                <div class="container">
+
+                </div>
+            </section>
+        </footer>
     </div>
 </div>
-<section id="docklet-ow">
+<section id="docklet">
     <!--chat list-->
 </section>
 <a role="button" id="scrolltop" class="fade" ride="scrollToTop"></a>

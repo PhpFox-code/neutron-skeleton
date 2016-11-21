@@ -70,6 +70,87 @@
     'form' => 'Phpfox\\Form\\Form',
     'fieldset' => 'Phpfox\\Form\\Fieldset',
   ),
+  'html_footer' => 
+  array (
+    'styles' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\ExternalStyle',
+    ),
+    'inline_styles' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\InlineStyle',
+    ),
+    'scripts' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\ExternalScript',
+    ),
+    'inline_scripts' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\InlineScript',
+    ),
+    'html_code' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HtmlCode',
+    ),
+  ),
+  'html_header' => 
+  array (
+    'title' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadTitle',
+    ),
+    'keywords' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadKeyword',
+    ),
+    'meta' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadMeta',
+    ),
+    'open_graph' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadOpenGraph',
+    ),
+    'links' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadLink',
+    ),
+    'styles' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\ExternalStyle',
+    ),
+    'inline_styles' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\InlineStyle',
+    ),
+    'scripts' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\ExternalScript',
+    ),
+    'inline_scripts' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\InlineScript',
+    ),
+    'html_code' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HtmlCode',
+    ),
+  ),
   'log.containers' => 
   array (
     'default' => 
@@ -78,6 +159,15 @@
       array (
         'driver' => 'filesystem',
         'filename' => 'main.log',
+      ),
+    ),
+    'auth' => 
+    array (
+      0 => 
+      array (
+        'driver' => 'filesystem',
+        'model' => 'auth_log',
+        'filename' => 'auth.log',
       ),
     ),
   ),
@@ -191,11 +281,6 @@
       0 => NULL,
       1 => 'Phpfox\\Auth\\AuthManager',
     ),
-    'breadcrumb' => 
-    array (
-      0 => NULL,
-      1 => 'Phpfox\\Breadcrumb\\BreadcrumbManager',
-    ),
     'cache' => 
     array (
       0 => NULL,
@@ -288,15 +373,103 @@
       0 => NULL,
       1 => 'Phpfox\\View\\ViewLayout',
     ),
-    'assets' => 
+    'breadcrumb' => 
     array (
       0 => NULL,
-      1 => 'Phpfox\\ViewAsset\\AssetManager',
+      1 => 'Phpfox\\ViewAsset\\Breadcrumb',
+    ),
+    'html_header' => 
+    array (
+      0 => 'Phpfox\\ViewAsset\\AssetContainerFactory',
+      1 => 'Phpfox\\ViewAsset\\AssetContainer',
+      2 => 'html_header',
+    ),
+    'html_footer' => 
+    array (
+      0 => 'Phpfox\\ViewAsset\\AssetContainerFactory',
+      1 => 'Phpfox\\ViewAsset\\AssetContainer',
+      2 => 'html_footer',
+    ),
+    'head.title' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadTitle',
+    ),
+    'head.meta' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadMeta',
+    ),
+    'head.open_graph' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadOpenGraph',
+    ),
+    'head.links' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadLink',
+    ),
+    'html_code.start' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HtmlCode',
+    ),
+    'html_code.shutdown' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HtmlCode',
+    ),
+    'external_scripts.start' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\ExternalScript',
+    ),
+    'inline_scripts.start' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\InlineScript',
+    ),
+    'external_styles.start' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\ExternalStyle',
+    ),
+    'inline_styles.start' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\InlineStyle',
+    ),
+    'head.keywords' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\HeadKeyword',
+    ),
+    'inline_scripts.shutdown' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\InlineScript',
+    ),
+    'external_scripts.shutdown' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\ExternalScript',
+    ),
+    'inline_styles.shutdown' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\ViewAsset\\InlineStyle',
     ),
     'widgets' => 
     array (
       0 => NULL,
       1 => 'Phpfox\\ViewWidget\\WidgetManager',
+    ),
+    'log.auth' => 
+    array (
+      0 => 'Phpfox\\Log\\LogContainerFactory',
+      1 => NULL,
+      2 => 'auth',
     ),
     'user.callback' => 
     array (
