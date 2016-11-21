@@ -1,6 +1,6 @@
 <?php
 
-$time = microtime(1);
+define('PHPFOX_TIME_START', microtime(true));
 
 ob_start();
 
@@ -10,4 +10,6 @@ service('app')->dispatch();
 
 echo ob_get_clean();
 
-echo PHP_EOL, (microtime(1) - $time) * 1000, ' (ms)';
+define('PHPFOX_TIME_SHUTDOWN', microtime(true));
+
+service('log.auth')->info('Can not log because error message');

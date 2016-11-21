@@ -5,11 +5,20 @@ namespace User;
 return [
     'psr4'     => [
         'User\\' => [
-            'package/src/phpfox-module-user/src',
-            'package/src/phpfox-module-user/test',
+            'package/phpfox-module-user/src',
+            'package/phpfox-module-user/test',
         ],
     ],
-    'routes'   => [],
+    'routes'   => [
+        'profile/members' => [
+            'route'      => '<name>/members',
+            'filter'   => '@profile',
+            'defaults' => [
+                'controller' => Controller\IndexController::class,
+                'action'     => 'index',
+            ],
+        ],
+    ],
     'models'   => [
         'user' => [Model\UserTable::class, Model\User::class],
     ],

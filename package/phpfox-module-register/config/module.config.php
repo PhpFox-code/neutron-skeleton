@@ -3,15 +3,15 @@
 namespace Register;
 
 return [
-    'psr4'      => [
+    'psr4'   => [
         'Register\\' => [
             'package/phpfox-module-register/src',
             'package/phpfox-module-register/test',
         ],
     ],
-    'routes'    => [
+    'routes' => [
         'register' => [
-            'uri'      => 'register(/<step>)',
+            'route'      => 'register(/<step>)',
             'defaults' => [
                 'controller' => Controller\IndexController::class,
                 'action'     => 'index',
@@ -19,7 +19,7 @@ return [
             ],
         ],
     ],
-    'views' => [
+    'views'  => [
         'register/index/index' => 'package/phpfox-module-register/view/index/index.phtml',
     ],
 ];

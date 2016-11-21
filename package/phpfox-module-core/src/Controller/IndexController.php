@@ -9,8 +9,12 @@ class IndexController extends StandardController
 {
     public function actionIndex()
     {
-        service('html_header')
-            ->get('title')
+        if (true) {
+            return $this->forward('User\Controller\IndexController', 'index');
+        }
+
+        service('html_header')->get('title')
+            ->clear()
             ->append('Main page')
             ->append('Blog Post');
 

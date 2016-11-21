@@ -14,6 +14,8 @@ class ErrorController extends StandardController
 
     public function action404()
     {
+        service('layout')->setTemplate('layout/master/404');
+
         return new ViewModel('core/error/404', []);
     }
 

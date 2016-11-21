@@ -1,6 +1,8 @@
 <?php
 namespace Core;
 
+use Core\Controller\AdminIndexController;
+
 return [
     'psr4'   => [
         'Core\\' => [
@@ -9,8 +11,24 @@ return [
         ],
     ],
     'routes' => [
-        'home' => [
-            'uri'      => '/',
+        'home'    => [
+            'route'      => '/',
+            'defaults' => [
+                'controller' => Controller\IndexController::class,
+                'action'     => 'index',
+            ],
+        ],
+        'admin'   => [
+            'route'      => '{admincp}(/<action>)',
+            'defaults' => [
+                'controller' => AdminIndexController::class,
+                'action'     => 'index',
+            ],
+
+        ],
+        'profile' => [
+            'route'      => '<name>',
+            'filter'   => '@profile',
             'defaults' => [
                 'controller' => Controller\IndexController::class,
                 'action'     => 'index',

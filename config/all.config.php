@@ -52,6 +52,10 @@
     array (
       0 => 'user.callback',
     ),
+    'onViewLayoutPrepare' => 
+    array (
+      0 => 'theme.listener',
+    ),
   ),
   'forms.decorator' => 
   array (
@@ -174,7 +178,12 @@
   ),
   'log.containers' => 
   array (
-    'default' => 
+    'log.auth' => 
+    array (
+      'driver' => 'db',
+      'model' => 'auth_log',
+    ),
+    'log.main' => 
     array (
       0 => 
       array (
@@ -182,19 +191,11 @@
         'filename' => 'main.log',
       ),
     ),
-    'auth' => 
-    array (
-      0 => 
-      array (
-        'driver' => 'filesystem',
-        'model' => 'auth_log',
-        'filename' => 'auth.log',
-      ),
-    ),
   ),
   'log.drivers' => 
   array (
     'filesystem' => 'Phpfox\\Log\\FilesystemLogger',
+    'db' => 'Phpfox\\Log\\DbLogger',
   ),
   'models' => 
   array (
@@ -202,11 +203,22 @@
     array (
       0 => 'Auth\\Model\\AuthPasswordTable',
       1 => 'Auth\\Model\\AuthPassword',
+      2 => ':auth_password',
+      3 => NULL,
     ),
     'auth_ticket' => 
     array (
       0 => 'Auth\\Model\\AuthTicketTable',
       1 => 'Auth\\Model\\AuthTicket',
+      2 => ':auth_ticket',
+      3 => NULL,
+    ),
+    'auth_log' => 
+    array (
+      0 => 'Auth\\Model\\AuthLogTable',
+      1 => 'Auth\\Model\\AuthLog',
+      2 => ':auth_log',
+      3 => NULL,
     ),
     'user' => 
     array (
@@ -238,15 +250,28 @@
     ),
     'User\\' => 
     array (
-      0 => 'package/src/phpfox-module-user/src',
-      1 => 'package/src/phpfox-module-user/test',
+      0 => 'package/phpfox-module-user/src',
+      1 => 'package/phpfox-module-user/test',
+    ),
+    'PhpfoxThemeDefault\\' => 
+    array (
+      0 => 'package/phpfox-theme-default/src',
+      1 => 'package/phpfox-theme-default/test',
+    ),
+  ),
+  'router.filters' => 
+  array (
+    '@profile' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\Router\\ProfileNameFilter',
     ),
   ),
   'routes' => 
   array (
     'login' => 
     array (
-      'uri' => 'login',
+      'route' => 'login',
       'defaults' => 
       array (
         'controller' => 'Auth\\Controller\\LoginController',
@@ -255,7 +280,7 @@
     ),
     'logout' => 
     array (
-      'uri' => 'logout',
+      'route' => 'logout',
       'defaults' => 
       array (
         'controller' => 'Auth\\Controller\\LogoutController',
@@ -264,20 +289,39 @@
     ),
     'auth_password' => 
     array (
-      'uri' => 'password/<action>',
+      'route' => 'password(/<action>)',
       'wheres' => 
       array (
         'action' => '(request|recovery|resend|confirm)',
       ),
       'defaults' => 
       array (
-        'controller' => 'Auth\\Controller\\LogoutController',
-        'index' => 'request',
+        'controller' => 'Auth\\Controller\\PasswordController',
+        'action' => 'request',
       ),
     ),
     'home' => 
     array (
-      'uri' => '/',
+      'route' => '/',
+      'defaults' => 
+      array (
+        'controller' => 'Core\\Controller\\IndexController',
+        'action' => 'index',
+      ),
+    ),
+    'admin' => 
+    array (
+      'route' => '{admincp}(/<action>)',
+      'defaults' => 
+      array (
+        'controller' => 'Core\\Controller\\AdminIndexController',
+        'action' => 'index',
+      ),
+    ),
+    'profile' => 
+    array (
+      'route' => '<name>',
+      'filter' => '@profile',
       'defaults' => 
       array (
         'controller' => 'Core\\Controller\\IndexController',
@@ -286,12 +330,22 @@
     ),
     'register' => 
     array (
-      'uri' => 'register(/<step>)',
+      'route' => 'register(/<step>)',
       'defaults' => 
       array (
         'controller' => 'Register\\Controller\\IndexController',
         'action' => 'index',
         'step' => '0',
+      ),
+    ),
+    'profile/members' => 
+    array (
+      'route' => '<name>/members',
+      'filter' => '@profile',
+      'defaults' => 
+      array (
+        'controller' => 'User\\Controller\\IndexController',
+        'action' => 'index',
       ),
     ),
   ),
@@ -301,6 +355,12 @@
     array (
       0 => NULL,
       1 => 'Phpfox\\Auth\\AuthManager',
+    ),
+    'log.auth' => 
+    array (
+      0 => 'Phpfox\\Log\\LoggerFactory',
+      1 => NULL,
+      2 => 'log.auth',
     ),
     'cache' => 
     array (
@@ -333,11 +393,11 @@
       0 => NULL,
       1 => 'Phpfox\\I18n\\Translator',
     ),
-    'log' => 
+    'log.main' => 
     array (
       0 => 'Phpfox\\Log\\LogContainerFactory',
       1 => NULL,
-      2 => 'default',
+      2 => 'log.main',
     ),
     'mail' => 
     array (
@@ -373,6 +433,11 @@
     array (
       0 => NULL,
       1 => 'Phpfox\\Router\\RouteManager',
+    ),
+    'router.filters' => 
+    array (
+      0 => NULL,
+      1 => 'Phpfox\\Router\\FilterContainer',
     ),
     'serviceManager' => 
     array (
@@ -486,16 +551,15 @@
       0 => NULL,
       1 => 'Phpfox\\ViewWidget\\WidgetManager',
     ),
-    'log.auth' => 
-    array (
-      0 => 'Phpfox\\Log\\LogContainerFactory',
-      1 => NULL,
-      2 => 'auth',
-    ),
     'user.callback' => 
     array (
       0 => NULL,
       1 => 'User\\Service\\EventListener',
+    ),
+    'theme.listener' => 
+    array (
+      0 => NULL,
+      1 => 'PhpfoxThemeDefault\\Listener\\ThemeListener',
     ),
   ),
   'views' => 
@@ -508,8 +572,12 @@
     'core/error/error' => 'package/phpfox-module-core/view/error/error.phtml',
     'core/error/404' => 'package/phpfox-module-core/view/error/404.phtml',
     'register/index/index' => 'package/phpfox-module-register/view/index/index.phtml',
-    'layout/default' => 'package/phpfox-theme-default/view/layout/default.phtml',
-    'layout/admin' => 'package/phpfox-theme-default/view/layout/admin.phtml',
+    'layout/master/content' => 'package/phpfox-theme-default/layout/master/content.phtml',
+    'layout/master/header' => 'package/phpfox-theme-default/layout/master/header.phtml',
+    'layout/master/footer' => 'package/phpfox-theme-default/layout/master/footer.phtml',
+    'layout/master/default' => 'package/phpfox-theme-default/layout/master/default.phtml',
+    'layout/master/admin' => 'package/phpfox-theme-default/layout/master/admin.phtml',
+    'layout/master/404' => 'package/phpfox-theme-default/layout/master/404.phtml',
   ),
   'widgets' => 
   array (
@@ -528,5 +596,10 @@
       'database' => 'phpfox_v5',
       'socket' => NULL,
     ),
+  ),
+  'routes.translate' => 
+  array (
+    '{admincp}' => 'admincp',
+    '{blog}' => 'bài-viết',
   ),
 );

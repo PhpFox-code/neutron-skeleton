@@ -2,7 +2,7 @@
 
 namespace Auth;
 
-use Phpfox\Log\LogContainerFactory;
+use Phpfox\Log\LoggerFactory;
 
 $view = 'package/phpfox-module-auth/view';
 
@@ -14,16 +14,13 @@ return [
         ],
     ],
     'log.containers' => [
-        'auth' => [
-            [
-                'driver'   => 'filesystem',
-                'model'    => 'auth_log',
-                'filename' => 'auth.log',
-            ],
+        'log.auth' => [
+            'driver' => 'db',
+            'model'  => 'auth_log',
         ],
     ],
     'services'       => [
-        'log.auth' => [LogContainerFactory::class, null, 'auth'],
+        'log.auth' => [LoggerFactory::class, null, 'log.auth'],
     ],
     'auth.adapters'  => [
         'password' => Adapter\PasswordAdapter::class,
@@ -36,27 +33,27 @@ return [
     ],
     'routes'         => [
         'login'         => [
-            'uri'      => 'login',
+            'route'      => 'login',
             'defaults' => [
                 'controller' => Controller\LoginController::class,
                 'action'     => 'index',
             ],
         ],
         'logout'        => [
-            'uri'      => 'logout',
+            'route'      => 'logout',
             'defaults' => [
                 'controller' => Controller\LogoutController::class,
                 'action'     => 'index',
             ],
         ],
         'auth_password' => [
-            'uri'      => 'password/<action>',
+            'route'      => 'password(/<action>)',
             'wheres'   => [
                 'action' => '(request|recovery|resend|confirm)',
             ],
             'defaults' => [
-                'controller' => Controller\LogoutController::class,
-                'index'      => 'request',
+                'controller' => Controller\PasswordController::class,
+                'action'     => 'request',
             ],
         ],
     ],
@@ -68,10 +65,20 @@ return [
         'auth_password' => [
             Model\AuthPasswordTable::class,
             Model\AuthPassword::class,
+            ':auth_password',
+            null,
         ],
         'auth_ticket'   => [
             Model\AuthTicketTable::class,
             Model\AuthTicket::class,
+            ':auth_ticket',
+            null,
+        ],
+        'auth_log'      => [
+            Model\AuthLogTable::class,
+            Model\AuthLog::class,
+            ':auth_log',
+            null,
         ],
     ],
     'views'          => [

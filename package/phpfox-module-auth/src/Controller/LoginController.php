@@ -19,7 +19,11 @@ class LoginController extends StandardController
     {
         $requester = service('requester');
 
-        service('log.auth')->debug(var_export($requester->getParams()));
+        service('html_header')
+            ->get('title')
+            ->set('Login');
+
+        service('log.auth')->debug(var_export($requester->getParams(),true));
 
         if ($requester->isPost()) {
 
