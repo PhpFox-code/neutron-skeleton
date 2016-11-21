@@ -38,6 +38,7 @@ class ComposerStaticInit4ef94c4bd8595736b10478521ee5e830
             'Phpfox\\RequireJs\\' => 17,
             'Phpfox\\Mysqli\\' => 14,
             'Phpfox\\Mvc\\' => 11,
+            'Phpfox\\Model\\' => 13,
             'Phpfox\\Mail\\' => 12,
             'Phpfox\\Log\\' => 11,
             'Phpfox\\I18n\\' => 12,
@@ -110,6 +111,10 @@ class ComposerStaticInit4ef94c4bd8595736b10478521ee5e830
         array (
             0 => __DIR__ . '/..' . '/codelego/phpfox-mvc/src',
         ),
+        'Phpfox\\Model\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codelego/phpfox-model/src',
+        ),
         'Phpfox\\Mail\\' => 
         array (
             0 => __DIR__ . '/..' . '/codelego/phpfox-mail/src',
@@ -136,8 +141,7 @@ class ComposerStaticInit4ef94c4bd8595736b10478521ee5e830
         ),
         'Phpfox\\Db\\' => 
         array (
-            0 => __DIR__ . '/..' . '/codelego/phpfox-model/src',
-            1 => __DIR__ . '/..' . '/codelego/phpfox-db/src',
+            0 => __DIR__ . '/..' . '/codelego/phpfox-db/src',
         ),
         'Phpfox\\Config\\' => 
         array (

@@ -267,7 +267,10 @@
       1 => 'Phpfox\\Router\\ProfileNameFilter',
     ),
   ),
-  'routes' => 
+  'router.phrases' => 
+  array (
+  ),
+  'router.routes' => 
   array (
     'login' => 
     array (
@@ -340,7 +343,7 @@
     ),
     'profile/members' => 
     array (
-      'route' => '<name>/members',
+      'route' => '<name>/{members}',
       'filter' => '@profile',
       'defaults' => 
       array (
@@ -429,7 +432,7 @@
       0 => NULL,
       1 => 'Phpfox\\RequireJs\\RequireJs',
     ),
-    'routing' => 
+    'router' => 
     array (
       0 => NULL,
       1 => 'Phpfox\\Router\\RouteManager',
@@ -596,10 +599,5 @@
       'database' => 'phpfox_v5',
       'socket' => NULL,
     ),
-  ),
-  'routes.translate' => 
-  array (
-    '{admincp}' => 'admincp',
-    '{blog}' => 'bài-viết',
   ),
 );

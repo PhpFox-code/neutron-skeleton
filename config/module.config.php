@@ -30,7 +30,7 @@
       'auth/password/recovery' => 'package/phpfox-module-auth/view/password/recovery.phtml',
     ),
   ),
-  'routes' => 
+  'router.routes' =>
   array (
     'login' => 
     array (

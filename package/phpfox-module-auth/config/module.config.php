@@ -31,7 +31,7 @@ return [
         'se'      => Adapter\SEAuthPassword::class,
         'fox'     => Adapter\FoxAuthPassword::class,
     ],
-    'routes'         => [
+    'router.routes'         => [
         'login'         => [
             'route'      => 'login',
             'defaults' => [

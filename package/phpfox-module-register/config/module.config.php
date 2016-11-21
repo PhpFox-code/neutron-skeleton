@@ -9,7 +9,7 @@ return [
             'package/phpfox-module-register/test',
         ],
     ],
-    'routes' => [
+    'router.routes' => [
         'register' => [
             'route'      => 'register(/<step>)',
             'defaults' => [

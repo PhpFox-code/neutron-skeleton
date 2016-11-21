@@ -3,15 +3,15 @@
 namespace User;
 
 return [
-    'psr4'     => [
+    'psr4'           => [
         'User\\' => [
             'package/phpfox-module-user/src',
             'package/phpfox-module-user/test',
         ],
     ],
-    'routes'   => [
+    'router.routes'         => [
         'profile/members' => [
-            'route'      => '<name>/members',
+            'route'    => '<name>/{members}',
             'filter'   => '@profile',
             'defaults' => [
                 'controller' => Controller\IndexController::class,
@@ -19,13 +19,13 @@ return [
             ],
         ],
     ],
-    'models'   => [
+    'models'         => [
         'user' => [Model\UserTable::class, Model\User::class],
     ],
-    'services' => [
+    'services'       => [
         'user.callback' => [null, Service\EventListener::class],
     ],
-    'events'   => [
+    'events'         => [
         'user.callback' => [
             'onBeforeLogin',
             'onAfterLogin',

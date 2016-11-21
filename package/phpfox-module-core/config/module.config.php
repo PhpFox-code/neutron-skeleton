@@ -10,7 +10,7 @@ return [
             'package/phpfox-module-core/test',
         ],
     ],
-    'routes' => [
+    'router.routes' => [
         'home'    => [
             'route'      => '/',
             'defaults' => [
