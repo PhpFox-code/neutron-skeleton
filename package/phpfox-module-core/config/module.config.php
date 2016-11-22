@@ -4,22 +4,28 @@ namespace Core;
 use Core\Controller\AdminIndexController;
 
 return [
-    'psr4'   => [
+    'psr4'            => [
         'Core\\' => [
             'package/phpfox-module-core/src',
             'package/phpfox-module-core/test',
         ],
     ],
-    'router.routes' => [
+    'session.drivers' => [
+        'database' => Session\DbSaveHandler::class,
+    ],
+    'session.adapter' => [
+        'driver' => 'database',
+    ],
+    'router.routes'   => [
         'home'    => [
-            'route'      => '/',
+            'route'    => '/',
             'defaults' => [
                 'controller' => Controller\IndexController::class,
                 'action'     => 'index',
             ],
         ],
         'admin'   => [
-            'route'      => '{admincp}(/<action>)',
+            'route'    => '{admincp}(/<action>)',
             'defaults' => [
                 'controller' => AdminIndexController::class,
                 'action'     => 'index',
@@ -27,7 +33,7 @@ return [
 
         ],
         'profile' => [
-            'route'      => '<name>',
+            'route'    => '<name>',
             'filter'   => '@profile',
             'defaults' => [
                 'controller' => Controller\IndexController::class,
@@ -35,7 +41,15 @@ return [
             ],
         ],
     ],
-    'views'  => [
+    'models'          => [
+        'core_session' => [
+            Model\CoreSessionTable::class,
+            Model\CoreSession::class,
+            ':core_session',
+            null,
+        ],
+    ],
+    'views'           => [
         'core/error/error' => 'package/phpfox-module-core/view/error/error.phtml',
         'core/error/404'   => 'package/phpfox-module-core/view/error/404.phtml',
     ],

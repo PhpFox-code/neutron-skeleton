@@ -10,6 +10,53 @@
     'se' => 'Auth\\Adapter\\SEAuthPassword',
     'fox' => 'Auth\\Adapter\\FoxAuthPassword',
   ),
+  'cache.adapters' => 
+  array (
+    'cache.filesystem' => 
+    array (
+      'driver' => 'filesystem',
+    ),
+    'cache.apc' => 
+    array (
+      'driver' => 'apc',
+    ),
+    'cache.apcu' => 
+    array (
+      'driver' => 'apcu',
+    ),
+    'cache.memcache' => 
+    array (
+      'driver' => 'memcache',
+      'port' => 11211,
+      'timeout' => 1,
+      'persistent' => true,
+      'retry_interval' => 15,
+      'servers' => 
+      array (
+        0 => '127.0.0.1',
+      ),
+    ),
+    'cache.memcached' => 
+    array (
+      'driver' => 'memcached',
+      'port' => 11211,
+      'timeout' => 1,
+      'persistent' => true,
+      'retry_interval' => 15,
+      'servers' => 
+      array (
+        0 => '127.0.0.1',
+      ),
+    ),
+  ),
+  'cache.drivers' => 
+  array (
+    'filesystem' => 'Phpfox\\Cache\\FilesystemCacheStorage',
+    'apc' => 'Phpfox\\Cache\\ApcCacheStorage',
+    'apcu' => 'Phpfox\\Cache\\ApcuCacheStorage',
+    'memcache' => 'Phpfox\\Cache\\MemcacheCacheStorage',
+    'memcached' => 'Phpfox\\Cache\\MemcachedCacheStorage',
+  ),
   'db.drivers' => 
   array (
     'mysqli' => 'Phpfox\\Mysqli\\MysqliAdapter',
@@ -220,6 +267,13 @@
       2 => ':auth_log',
       3 => NULL,
     ),
+    'core_session' => 
+    array (
+      0 => 'Core\\Model\\CoreSessionTable',
+      1 => 'Core\\Model\\CoreSession',
+      2 => ':core_session',
+      3 => NULL,
+    ),
     'user' => 
     array (
       0 => 'User\\Model\\UserTable',
@@ -365,10 +419,41 @@
       1 => NULL,
       2 => 'log.auth',
     ),
+    'cache.local' => 
+    array (
+      0 => 'Phpfox\\Cache\\CacheFactory',
+      1 => NULL,
+      2 => 'cache.filesystem',
+    ),
+    'cache.apc' => 
+    array (
+      0 => 'Phpfox\\Cache\\CacheFactory',
+      1 => NULL,
+      2 => 'cache.apc',
+    ),
+    'cache.apcu' => 
+    array (
+      0 => 'Phpfox\\Cache\\CacheFactory',
+      1 => NULL,
+      2 => 'cache.apcu',
+    ),
     'cache' => 
     array (
-      0 => NULL,
-      1 => 'Phpfox\\Cache\\CacheManager',
+      0 => 'Phpfox\\Cache\\CacheFactory',
+      1 => NULL,
+      2 => 'cache.filesystem',
+    ),
+    'cache.memcache' => 
+    array (
+      0 => 'Phpfox\\Cache\\CacheFactory',
+      1 => NULL,
+      2 => 'cache.memcache',
+    ),
+    'cache.memcached' => 
+    array (
+      0 => 'Phpfox\\Cache\\CacheFactory',
+      1 => NULL,
+      2 => 'cache.memcached',
     ),
     'configManager' => 
     array (
@@ -564,6 +649,15 @@
       0 => NULL,
       1 => 'PhpfoxThemeDefault\\Listener\\ThemeListener',
     ),
+  ),
+  'session.adapter' => 
+  array (
+    'driver' => 'database',
+  ),
+  'session.drivers' => 
+  array (
+    'files' => 'files',
+    'database' => 'Core\\Session\\DbSaveHandler',
   ),
   'views' => 
   array (
