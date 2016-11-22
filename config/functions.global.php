@@ -53,8 +53,10 @@ namespace {
      *
      * @return mixed
      */
-    function _inflect($string){
-        return str_replace(' ', '', ucwords(str_replace(array('.', '-'), ' ' , $string)));
+    function _inflect($string)
+    {
+        return str_replace(' ', '',
+            ucwords(str_replace(['.', '-'], ' ', $string)));
     }
 
     /**
@@ -62,8 +64,10 @@ namespace {
      *
      * @return string
      */
-    function _deflect($string){
-        return strtolower(trim(preg_replace('/([a-z0-9])([A-Z])/', '\1-\2', $string), '-. '));
+    function _deflect($string)
+    {
+        return strtolower(trim(preg_replace('/([a-z0-9])([A-Z])/', '\1-\2',
+            $string), '-. '));
     }
 
     /**
@@ -137,8 +141,10 @@ namespace {
         foreach ($array as $k => $v) {
             if (!isset($base[$k])) {
                 $base[$k] = $v;
-            } else {
+            } elseif (is_array($v)) {
                 $base[$k] = array_merge($base[$k], $v);
+            } else {
+                $base[$k] = $v;
             }
         }
         return $base;

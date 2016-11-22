@@ -32,7 +32,8 @@
     "codelego/phpfox-cache": "dev-master",
     "codelego/phpfox-log": "dev-master",
     "codelego/phpfox-validator": "dev-master",
-    "codelego/phpfox-config": "dev-master"
+    "codelego/phpfox-config": "dev-master",
+    "codelego/phpfox-memcache": "dev-master"
   },
   "require-dev": {
     "phpunit/PHPUnit": "^4.0"
