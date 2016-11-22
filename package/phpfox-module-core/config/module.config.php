@@ -46,10 +46,16 @@ return [
         ],
     ],
     'models'          => [
-        'core_session' => [
+        'session'         => [
             Model\CoreSessionTable::class,
             Model\CoreSession::class,
             ':core_session',
+            null,
+        ],
+        'storage_service' => [
+            Model\StorageServiceTable::class,
+            Model\StorageService::class,
+            ':core_storage_service',
             null,
         ],
     ],

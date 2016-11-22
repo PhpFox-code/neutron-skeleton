@@ -44,7 +44,7 @@ class DbSaveHandler implements SaveHandlerInterface
      */
     public function getGateway()
     {
-        return service('models')->get('core_session');
+        return service('models')->get('session');
     }
 
     public function close()
