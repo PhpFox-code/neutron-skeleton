@@ -322,12 +322,9 @@
             1 => 'Phpfox\\Auth\\AuthManager',
         ],
         'log.auth'                  => [
-            0 => 'Phpfox\\Log\\LogContainerFactory',
+            0 => 'Phpfox\\Log\\LoggerFactory',
             1 => null,
             2 => 'log.auth',
-            3 => 'Phpfox\\Log\\LoggerFactory',
-            4 => null,
-            5 => 'log.auth',
         ],
         'cache.local'               => [
             0 => 'Phpfox\\Cache\\CacheStorageFactory',
@@ -418,20 +415,14 @@
             1 => 'Phpfox\\Service\\ServiceManager',
         ],
         'session'                   => [
-            0 => 'Phpfox\\Session\\SampleSessionFactory',
+            0 => 'Core\\Factory\\SessionManagerFactory',
             1 => null,
             2 => null,
-            3 => 'Core\\Factory\\SessionManagerFactory',
-            4 => null,
-            5 => null,
         ],
         'storage'                   => [
-            0 => 'Phpfox\\Storage\\SampleStorageManagerFactory',
+            0 => 'Core\\Factory\\StorageManagerFactory',
             1 => null,
             2 => null,
-            3 => 'Core\\Factory\\StorageManagerFactory',
-            4 => null,
-            5 => null,
         ],
         'renderer'                  => [
             0 => null,
