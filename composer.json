@@ -28,7 +28,7 @@
     "codelego/phpfox-requirejs": "dev-master",
     "codelego/phpfox-view-widget": "dev-master",
     "codelego/phpfox-mail": "dev-master",
-    "codelego/phpfox-file-storage": "dev-master",
+    "codelego/phpfox-storage": "dev-master",
     "codelego/phpfox-cache": "dev-master",
     "codelego/phpfox-log": "dev-master",
     "codelego/phpfox-validator": "dev-master",
