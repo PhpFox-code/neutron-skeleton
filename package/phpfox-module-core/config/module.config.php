@@ -16,6 +16,10 @@ return [
     'session.adapter' => [
         'driver' => 'database',
     ],
+    'services'        => [
+        'storage' => [Factory\StorageManagerFactory::class, null, null],
+        'session' => [Factory\SessionManagerFactory::class, null, null],
+    ],
     'router.routes'   => [
         'home'    => [
             'route'    => '/',
