@@ -17,8 +17,9 @@ return [
         'driver' => 'database',
     ],
     'services'        => [
-        'storage' => [Factory\StorageManagerFactory::class, null, null],
-        'session' => [Factory\SessionManagerFactory::class, null, null],
+        'storage'     => [Factory\StorageManagerFactory::class, null, null],
+        'session'     => [Factory\SessionManagerFactory::class, null, null],
+        'core.module' => [null, Module::class],
     ],
     'router.routes'   => [
         'home'    => [

@@ -2,7 +2,6 @@
 
 namespace Core\Factory;
 
-
 use Phpfox\Session\SessionManager;
 
 class SessionManagerFactory
