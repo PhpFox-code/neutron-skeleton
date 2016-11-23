@@ -4,8 +4,8 @@ namespace Register;
 
 class Module
 {
-    public function getConfig()
+    public function __call()
     {
-        return include __DIR__ . '/../config/module.config.php';
+
     }
 }

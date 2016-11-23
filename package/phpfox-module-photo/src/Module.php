@@ -1,9 +1,10 @@
 <?php
-namespace Authentication;
+
+namespace Photo;
+
 
 class Module
 {
-
     public function __call()
     {
 

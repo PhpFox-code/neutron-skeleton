@@ -1,9 +1,9 @@
 <?php
-namespace Authentication;
+
+namespace Privacy;
 
 class Module
 {
-
     public function __call()
     {
 

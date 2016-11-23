@@ -1,9 +1,9 @@
 <?php
-namespace Authentication;
+
+namespace Video;
 
 class Module
 {
-
     public function __call()
     {
 

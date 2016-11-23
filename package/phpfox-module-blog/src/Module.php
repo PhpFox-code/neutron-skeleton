@@ -1,5 +1,8 @@
 <?php
-namespace Authentication;
+
+namespace Blog;
+
+
 
 class Module
 {

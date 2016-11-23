@@ -37,17 +37,9 @@ foreach ($paths as $path) {
     if (!file_exists($path)) {
         continue;
     }
-    $data = include $path;
 
-    if (!is_array($data)) {
-        continue;
-    }
-    foreach ($data as $name => $array) {
-        if (!isset($merged[$name])) {
-            $merged[$name] = [];
-        }
-        $merged [$name] = _array_merge_recursive_new($merged[$name], $data[$name]);
-    }
+    $merged = _array_merge_recursive_new($merged, include $path);
+
 }
 
 ksort($merged);
