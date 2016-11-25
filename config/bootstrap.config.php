@@ -103,68 +103,63 @@
         'form'          => 'Phpfox\\Form\\Form',
         'fieldset'      => 'Phpfox\\Form\\Fieldset',
     ],
-    'html_footer'     => [
-        'styles'         => [
+    'html.container'  => [
+        'header.title'          => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\ExternalStyle',
+            1 => 'Phpfox\\Html\\HeadTitle',
         ],
-        'inline_styles'  => [
+        'header.keyword'        => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\InlineStyle',
+            1 => 'Phpfox\\Html\\HeadKeyword',
         ],
-        'scripts'        => [
+        'header.meta'           => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\ExternalScript',
+            1 => 'Phpfox\\Html\\HeadMeta',
         ],
-        'inline_scripts' => [
+        'header.open_graph'     => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\InlineScript',
+            1 => 'Phpfox\\Html\\HeadOpenGraph',
         ],
-        'html_code'      => [
+        'header.link'           => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\HtmlCode',
+            1 => 'Phpfox\\Html\\HeadLink',
         ],
-    ],
-    'html_header'     => [
-        'title'          => [
+        'header.style'          => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadTitle',
+            1 => 'Phpfox\\Html\\ExternalStyle',
         ],
-        'keywords'       => [
+        'header.inline_style'   => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadKeyword',
+            1 => 'Phpfox\\Html\\InlineStyle',
         ],
-        'meta'           => [
+        'header.script'         => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadMeta',
+            1 => 'Phpfox\\Html\\ExternalScript',
         ],
-        'open_graph'     => [
+        'header.inline_script'  => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadOpenGraph',
+            1 => 'Phpfox\\Html\\InlineScript',
         ],
-        'links'          => [
+        'header.static_html'    => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadLink',
+            1 => 'Phpfox\\Html\\StaticHtml',
         ],
-        'styles'         => [
+        'breadcrumb'            => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\ExternalStyle',
+            1 => 'Phpfox\\Html\\Breadcrumb',
+            2 => null,
         ],
-        'inline_styles'  => [
+        'footer.script'         => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\InlineStyle',
+            1 => 'Phpfox\\Html\\ExternalScript',
         ],
-        'scripts'        => [
+        'footer.inline_scripts' => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\ExternalScript',
+            1 => 'Phpfox\\Html\\InlineScript',
         ],
-        'inline_scripts' => [
+        'footer.static_html'    => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\InlineScript',
-        ],
-        'html_code'      => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\HtmlCode',
+            1 => 'Phpfox\\Html\\StaticHtml',
         ],
     ],
     'log.containers'  => [
@@ -223,10 +218,6 @@
         'Auth\\'               => [
             0 => 'package/phpfox-module-auth/src',
             1 => 'package/phpfox-module-auth/test',
-        ],
-        'Blog\\'               => [
-            0 => 'package/phpfox-module-blog/src',
-            1 => 'package/phpfox-module-blog/test',
         ],
         'Core\\'               => [
             0 => 'package/phpfox-module-core/src',
@@ -317,200 +308,139 @@
         ],
     ],
     'services'        => [
-        'auth'                      => [
+        'auth'            => [
             0 => null,
             1 => 'Phpfox\\Auth\\AuthManager',
         ],
-        'log.auth'                  => [
+        'log.auth'        => [
             0 => 'Phpfox\\Log\\LoggerFactory',
             1 => null,
             2 => 'log.auth',
         ],
-        'cache.local'               => [
+        'cache.local'     => [
             0 => 'Phpfox\\Cache\\CacheStorageFactory',
             1 => null,
             2 => 'cache.filesystem',
         ],
-        'cache.apc'                 => [
+        'cache.apc'       => [
             0 => 'Phpfox\\Cache\\CacheStorageFactory',
             1 => null,
             2 => 'cache.apc',
         ],
-        'cache.apcu'                => [
+        'cache.apcu'      => [
             0 => 'Phpfox\\Cache\\CacheStorageFactory',
             1 => null,
             2 => 'cache.apcu',
         ],
-        'cache'                     => [
+        'cache'           => [
             0 => 'Phpfox\\Cache\\CacheStorageFactory',
             1 => null,
             2 => 'cache.filesystem',
         ],
-        'cache.memcache'            => [
+        'cache.memcache'  => [
             0 => 'Phpfox\\Cache\\CacheStorageFactory',
             1 => null,
             2 => 'cache.memcache',
         ],
-        'cache.memcached'           => [
+        'cache.memcached' => [
             0 => 'Phpfox\\Cache\\CacheStorageFactory',
             1 => null,
             2 => 'cache.memcached',
         ],
-        'configManager'             => [
+        'configManager'   => [
             0 => null,
             1 => 'Phpfox\\Config\\ConfigManager',
         ],
-        'db'                        => [
+        'db'              => [
             0 => 'Phpfox\\Db\\AdapterFactory',
             1 => null,
             2 => 'default',
         ],
-        'eventManager'              => [
+        'eventManager'    => [
             0 => null,
             1 => 'Phpfox\\EventManager\\EventManager',
         ],
-        'translator'                => [
+        'html'            => [
+            0 => null,
+            1 => 'Phpfox\\Html\\HtmlFacades',
+            2 => 'html.container',
+        ],
+        'translator'      => [
             0 => null,
             1 => 'Phpfox\\I18n\\Translator',
         ],
-        'log.main'                  => [
+        'log.main'        => [
             0 => 'Phpfox\\Log\\LogContainerFactory',
             1 => null,
             2 => 'log.main',
         ],
-        'mail'                      => [
+        'mail'            => [
             0 => null,
             1 => 'Phpfox\\Mail\\MailService',
         ],
-        'models'                    => [
+        'models'          => [
             0 => null,
             1 => 'Phpfox\\Model\\GatewayManager',
         ],
-        'responder'                 => [
+        'responder'       => [
             0 => null,
             1 => 'Phpfox\\Mvc\\Responder',
         ],
-        'requester'                 => [
+        'requester'       => [
             0 => null,
             1 => 'Phpfox\\Mvc\\Requester',
         ],
-        'app'                       => [
+        'app'             => [
             0 => null,
             1 => 'Phpfox\\Mvc\\Application',
         ],
-        'requireJs'                 => [
+        'requireJs'       => [
             0 => null,
             1 => 'Phpfox\\RequireJs\\RequireJs',
         ],
-        'router'                    => [
+        'router'          => [
             0 => null,
             1 => 'Phpfox\\Router\\RouteManager',
         ],
-        'router.filters'            => [
+        'router.filters'  => [
             0 => null,
             1 => 'Phpfox\\Router\\FilterContainer',
         ],
-        'serviceManager'            => [
+        'serviceManager'  => [
             0 => null,
             1 => 'Phpfox\\Service\\ServiceManager',
         ],
-        'session'                   => [
+        'session'         => [
             0 => 'Core\\Factory\\SessionManagerFactory',
             1 => null,
             2 => null,
         ],
-        'storage'                   => [
+        'storage'         => [
             0 => 'Core\\Factory\\StorageManagerFactory',
             1 => null,
             2 => null,
         ],
-        'renderer'                  => [
+        'renderer'        => [
             0 => null,
             1 => 'Phpfox\\View\\PhpRenderer',
         ],
-        'layout'                    => [
+        'layout'          => [
             0 => null,
             1 => 'Phpfox\\View\\ViewLayout',
         ],
-        'breadcrumb'                => [
+        'widgets'         => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\Breadcrumb',
+            1 => 'Phpfox\\Widget\\WidgetManager',
         ],
-        'html_header'               => [
-            0 => 'Phpfox\\ViewAsset\\AssetContainerFactory',
-            1 => 'Phpfox\\ViewAsset\\AssetContainer',
-            2 => 'html_header',
-        ],
-        'html_footer'               => [
-            0 => 'Phpfox\\ViewAsset\\AssetContainerFactory',
-            1 => 'Phpfox\\ViewAsset\\AssetContainer',
-            2 => 'html_footer',
-        ],
-        'head.title'                => [
+        'core.module'     => [
             0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadTitle',
+            1 => 'Core\\Module',
         ],
-        'head.meta'                 => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadMeta',
-        ],
-        'head.open_graph'           => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadOpenGraph',
-        ],
-        'head.links'                => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadLink',
-        ],
-        'html_code.start'           => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\HtmlCode',
-        ],
-        'html_code.shutdown'        => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\HtmlCode',
-        ],
-        'external_scripts.start'    => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\ExternalScript',
-        ],
-        'inline_scripts.start'      => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\InlineScript',
-        ],
-        'external_styles.start'     => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\ExternalStyle',
-        ],
-        'inline_styles.start'       => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\InlineStyle',
-        ],
-        'head.keywords'             => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\HeadKeyword',
-        ],
-        'inline_scripts.shutdown'   => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\InlineScript',
-        ],
-        'external_scripts.shutdown' => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\ExternalScript',
-        ],
-        'inline_styles.shutdown'    => [
-            0 => null,
-            1 => 'Phpfox\\ViewAsset\\InlineStyle',
-        ],
-        'widgets'                   => [
-            0 => null,
-            1 => 'Phpfox\\ViewWidget\\WidgetManager',
-        ],
-        'user.callback'             => [
+        'user.callback'   => [
             0 => null,
             1 => 'User\\Service\\EventListener',
         ],
-        'theme.listener'            => [
+        'theme.listener'  => [
             0 => null,
             1 => 'PhpfoxThemeDefault\\Listener\\ThemeListener',
         ],

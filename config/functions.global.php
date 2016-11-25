@@ -2,6 +2,10 @@
 
 namespace {
 
+    use Phpfox\Config\ConfigManager;
+    use Phpfox\EventManager\EventManager;
+    use Phpfox\Service\ServiceManager;
+
     /**
      * Format a string using $number token
      *
@@ -211,5 +215,52 @@ namespace {
             $path = '/';
         }
         return [$path, $host, $method, $protocol];
+    }
+
+    /**
+     * @return ConfigManager
+     */
+    function configs()
+    {
+        return ConfigManager::instance();
+    }
+
+    /**
+     * @param string $key
+     * @param string $item
+     *
+     * @return mixed|null
+     */
+    function config($key, $item = null)
+    {
+        return ConfigManager::instance()->get($key, $item);
+    }
+
+
+    /**
+     * @param string $id
+     *
+     * @return mixed
+     */
+    function service($id)
+    {
+        return ServiceManager::instance()->get($id);
+    }
+
+    /**
+     * @return ServiceManager
+     */
+    function services()
+    {
+        return ServiceManager::instance();
+    }
+
+
+    /**
+     * @return EventManager
+     */
+    function events()
+    {
+        return EventManager::instance();
     }
 }
