@@ -50,11 +50,11 @@
         'mysqli' => 'Phpfox\\Mysqli\\MysqliAdapter',
     ],
     'events'          => [
-        'requireJs'      => [
+        'requireJs'     => [
             0 => 'onAssetManagerGetHeader',
             1 => 'onAssetManagerGetFooter',
         ],
-        'user.callback'  => [
+        'user.callback' => [
             0 => 'onBeforeLogin',
             1 => 'onAfterLogin',
             2 => 'onLoginSuccess',
@@ -62,9 +62,6 @@
             4 => 'onBeforeUserCreate',
             5 => 'onUserCreateSuccess',
             6 => 'onUserCreateFailure',
-        ],
-        'theme.listener' => [
-            0 => 'onViewLayoutPrepare',
         ],
     ],
     'forms.decorator' => [
@@ -104,62 +101,64 @@
         'fieldset'      => 'Phpfox\\Form\\Fieldset',
     ],
     'html.container'  => [
-        'header.title'          => [
+        'title'           => [
             0 => null,
             1 => 'Phpfox\\Html\\HeadTitle',
         ],
-        'header.keyword'        => [
+        'headKeyword'     => [
             0 => null,
             1 => 'Phpfox\\Html\\HeadKeyword',
         ],
-        'header.meta'           => [
+        'headMeta'        => [
             0 => null,
             1 => 'Phpfox\\Html\\HeadMeta',
         ],
-        'header.open_graph'     => [
+        'openGraph'       => [
             0 => null,
             1 => 'Phpfox\\Html\\HeadOpenGraph',
         ],
-        'header.link'           => [
+        'links'           => [
             0 => null,
             1 => 'Phpfox\\Html\\HeadLink',
         ],
-        'header.style'          => [
+        'styles'          => [
             0 => null,
             1 => 'Phpfox\\Html\\ExternalStyle',
         ],
-        'header.inline_style'   => [
+        'inlineStyles'    => [
             0 => null,
             1 => 'Phpfox\\Html\\InlineStyle',
         ],
-        'header.script'         => [
+        'script'          => [
             0 => null,
             1 => 'Phpfox\\Html\\ExternalScript',
         ],
-        'header.inline_script'  => [
+        'startScript'     => [
             0 => null,
             1 => 'Phpfox\\Html\\InlineScript',
         ],
-        'header.static_html'    => [
+        'bootHtml'        => [
             0 => null,
             1 => 'Phpfox\\Html\\StaticHtml',
         ],
-        'breadcrumb'            => [
+        'shutdownScripts' => [
+            0 => null,
+            1 => 'Phpfox\\Html\\InlineScript',
+        ],
+        'breadcrumb'      => [
             0 => null,
             1 => 'Phpfox\\Html\\Breadcrumb',
-            2 => null,
         ],
-        'footer.script'         => [
-            0 => null,
-            1 => 'Phpfox\\Html\\ExternalScript',
-        ],
-        'footer.inline_scripts' => [
-            0 => null,
-            1 => 'Phpfox\\Html\\InlineScript',
-        ],
-        'footer.static_html'    => [
-            0 => null,
-            1 => 'Phpfox\\Html\\StaticHtml',
+    ],
+    'job.handlers'    => [
+        'sample' => 'Phpfox\\Messaging\\SampleJobHandler',
+    ],
+    'log.container'   => [
+        'jobs.log' => [
+            0 => [
+                'driver'   => 'filesystem',
+                'filename' => 'jobs.log',
+            ],
         ],
     ],
     'log.containers'  => [
@@ -215,25 +214,21 @@
         ],
     ],
     'psr4'            => [
-        'Auth\\'               => [
-            0 => 'package/phpfox-module-auth/src',
-            1 => 'package/phpfox-module-auth/test',
+        'Auth\\'     => [
+            0 => 'package/phpfox-auth/src',
+            1 => 'package/phpfox-auth/test',
         ],
-        'Core\\'               => [
-            0 => 'package/phpfox-module-core/src',
-            1 => 'package/phpfox-module-core/test',
+        'Core\\'     => [
+            0 => 'package/phpfox-core/src',
+            1 => 'package/phpfox-core/test',
         ],
-        'Register\\'           => [
-            0 => 'package/phpfox-module-register/src',
-            1 => 'package/phpfox-module-register/test',
+        'Register\\' => [
+            0 => 'package/phpfox-register/src',
+            1 => 'package/phpfox-register/test',
         ],
-        'User\\'               => [
-            0 => 'package/phpfox-module-user/src',
-            1 => 'package/phpfox-module-user/test',
-        ],
-        'PhpfoxThemeDefault\\' => [
-            0 => 'package/phpfox-theme-default/src',
-            1 => 'package/phpfox-theme-default/test',
+        'User\\'     => [
+            0 => 'package/phpfox-user/src',
+            1 => 'package/phpfox-user/test',
         ],
     ],
     'router.filters'  => [
@@ -363,7 +358,7 @@
         'html'            => [
             0 => null,
             1 => 'Phpfox\\Html\\HtmlFacades',
-            2 => 'html.container',
+            2 => null,
         ],
         'translator'      => [
             0 => null,
@@ -377,6 +372,20 @@
         'mail'            => [
             0 => null,
             1 => 'Phpfox\\Mail\\MailService',
+        ],
+        'log.jobs'        => [
+            0 => 'Phpfox\\Log\\LogContainerFactory',
+            1 => null,
+        ],
+        'queues'          => [
+            0 => null,
+            1 => 'LocalQueueClass',
+            2 => 'queues',
+        ],
+        'queues.01'       => [
+            0 => null,
+            1 => 'AwsSQS',
+            2 => 'queue.01',
         ],
         'models'          => [
             0 => null,
@@ -440,10 +449,6 @@
             0 => null,
             1 => 'User\\Service\\EventListener',
         ],
-        'theme.listener'  => [
-            0 => null,
-            1 => 'PhpfoxThemeDefault\\Listener\\ThemeListener',
-        ],
     ],
     'session.adapter' => [
         'driver' => 'database',
@@ -459,20 +464,19 @@
         'ssh2'  => 'Phpfox\\Storage\\Ssh2StorageService',
     ],
     'views'           => [
-        'user/recent/login'      => 'package/phpfox-module-auth/view/widget/recent-login.phtml',
-        'auth/login/index'       => 'package/phpfox-module-auth/view/login/index.phtml',
-        'auth/logout/index'      => 'package/phpfox-module-auth/view/login/index.phtml',
-        'auth/password/forgot'   => 'package/phpfox-module-auth/view/password/forgot.phtml',
-        'auth/password/recovery' => 'package/phpfox-module-auth/view/password/recovery.phtml',
+        'user/recent/login'      => 'package/phpfox-core/view/widget/recent-login.phtml',
+        'auth/login/index'       => 'package/phpfox-core/view/login/index.phtml',
+        'auth/logout/index'      => 'package/phpfox-core/view/login/index.phtml',
+        'auth/password/forgot'   => 'package/phpfox-core/view/password/forgot.phtml',
+        'auth/password/recovery' => 'package/phpfox-core/view/password/recovery.phtml',
+        'layout/master/default'  => 'package/phpfox-core/view/layout/master/default',
+        'layout/master/admin'    => 'package/phpfox-core/view/layout/master/default',
+        'layout/partial/header'  => 'package/phpfox-core/view/layout/partial/header',
+        'layout/partial/footer'  => 'package/phpfox-core/view/layout/partial/footer',
+        'layout/partial/content' => 'package/phpfox-core/view/layout/partial/content',
         'core/error/error'       => 'package/phpfox-module-core/view/error/error.phtml',
         'core/error/404'         => 'package/phpfox-module-core/view/error/404.phtml',
         'register/index/index'   => 'package/phpfox-module-register/view/index/index.phtml',
-        'layout/master/content'  => 'package/phpfox-theme-default/layout/master/content.phtml',
-        'layout/master/header'   => 'package/phpfox-theme-default/layout/master/header.phtml',
-        'layout/master/footer'   => 'package/phpfox-theme-default/layout/master/footer.phtml',
-        'layout/master/default'  => 'package/phpfox-theme-default/layout/master/default.phtml',
-        'layout/master/admin'    => 'package/phpfox-theme-default/layout/master/admin.phtml',
-        'layout/master/404'      => 'package/phpfox-theme-default/layout/master/404.phtml',
     ],
     'widgets'         => [
         'user.small-login'  => 'Auth\\Widget\\SmallLogin',
